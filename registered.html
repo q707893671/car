@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jc</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <script src="src/js/jquery-2.js"></script>
+    <script src="src/js/publicjs.js"></script>
+    <script src="src/js/mui.min.js"></script>
+    <script src="src/js/gVerify.js"></script>
+    <link rel="stylesheet" href="src/css/publiccss.css">
+    <link rel="stylesheet" href="src/css/registered.css">
+	<style type="text/css">
+		.gaoyao{
+			width:2.3rem;
+			height: 1rem;
+			background: #fff;
+			position: absolute;
+			left:4.6rem;top: 6.35rem;
+			opacity: 0;
+			z-index: 2;
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+
+ <div id="divmusic"></div>
+		<audio id="audio" src="src/mp3/duang.mp3" style="display:none"></audio>
+<div class="registered">
+		<div class="container">  
+			<div class="logo logo2"></div>
+			
+		<div class="lo_dl">
+			<div class="lo_in">
+				<i></i><input type="number" name="" id="zc_iphone" value="" placeholder="请输入手机号"/>
+			</div>
+			
+			<div class="lo_in3 lo_in20">
+				<i></i><input type="" name="" id="zc_name" value="" placeholder="请输入昵称"/>
+			</div>
+			
+			<div class="lo_in3 lo_in7">
+				
+				<i></i>
+				<input type="" name="" class="code" id="code" value="" placeholder="请输入验证码"/>
+				<div class="imgyan"style="position: relative;">
+					<!--<span class="imgyan2">
+					</span>-->
+					<div id="v_container" style="position: absolute;top: -0.2rem;"></div>
+				</div>
+			</div>
+			
+			<div class="lo_in3 lo_in7">
+				<i></i><input type="" name="" id="zc_zijin" value="" placeholder="请输入短信验证码"/>	
+				<p class="imgyan">
+					<!--<span class="zc_djs" id="zc_djs">&nbsp;&nbsp;点击获取</span>-->
+					<!--<input type="" class="zc_djs" id="zc_djs" value="获取验证码"/>--> 
+					<div class="zc_djs" id="zc_djs">获取验证码</div>
+				</p>
+			</div>
+			<div class="lo_in3 lo_in8">
+				<i></i><input type="password" name="" id="zc_xinmi" value="" placeholder="请输入新密码"/>
+			</div>
+			<div class="lo_in3 lo_in8">
+				<i></i><input type="password" name="" id="zc_xinmi" value="" placeholder="请重复输入新密码"/>
+			</div>
+			<div class="lo_in2  lo_in9">
+				<i></i><input type="" name="" id="zc_anquan" value="" placeholder="请输入安全码"/>
+			</div>
+			<div class="gaoyao"></div>
+		</div>
+		<div class="btn">
+			<div id="re_zhuce"></div>
+		</div>
+		
+		
+			<div class="fanhui fanhui2">返回</div>
+		
+		
+		</div>			
+	</div>
+   
+
+
+    <script src="src/js/api.js"></script>
+    <script>
+   var verifyCode = new GVerify("v_container");
+//  smsccode=$("#code").val()
+       
+       
+
+		
+		var panD1=0;
+		var panD2=0;
+		var panD3=0;
+		
+		$("#zc_iphone").blur(function(){   
+			var zc_iphone = $(this).val();    
+			if(/^1[3|4|5|7|8][0-9]{9}$/.test(zc_iphone)) 
+			{   
+			}else{
+				mui.toast('请输入正确的手机号！')
+				var panD1=1;
+			}
+		});
+		
+        $('.zc_djs').click(function(){
+        	if(panD1==1||$("#zc_iphone").val()==''){
+				mui.toast('请输入正确的手机号！')
+			}else{
+        	$.ajax({
+					url:jc+"/Home/Api/sendsms",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						type:0,
+						phone:$("#zc_iphone").val(),
+
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+
+						if(result.code == 200){
+						localStorage.sendtime=result.data.sendtime;
+							
+							var timer = setInterval(function(){
+						  		daojishi(); 
+						  	},1000);
+					        var countdown = 60;
+					  	    var daojishi = function(){
+						  		countdown -= 1;
+//						  		document.getElementById("zc_djs").value = countdown + "s";
+								$("#zc_djs").html(countdown+"s")
+						  		if(countdown == 0){
+								    clearInterval(timer);
+//								    document.getElementById("zc_djs").value = "重新获取"; 
+									$("#zc_djs").html("重新获取")
+							   	}
+							    if(countdown > 0){
+							    	$("#zc_djs").attr("disabled",true);
+							    	$(".gaoyao").show()
+							    }
+							    if(countdown <= 0){
+							    	$("#zc_djs").attr("disabled",false);
+							    	$(".gaoyao").hide()
+							    } 
+						  	}; 
+						  	mui.toast('发送成功');
+						  }else if(result.code==-300){
+					    	    mui.toast('该手机号已被注册！')
+					        }else{
+					    	    mui.toast('获取失败！')
+					        }
+						
+						
+				    },  
+				  	error:function(){
+				  		mui.toast('获取失败!')
+				  	}	 
+				})
+        	}
+        })
+             
+            
+           $('#re_zhuce').click(function(){
+           	var sendtime1=localStorage.getItem("sendtime")
+        	if(panD1==1||$("#zc_iphone").val()==''){
+				mui.toast('请输入正确的手机号！')
+			}else if($("#zc_name").val()==''){
+				mui.toast('昵称不能为空！')
+			}else if($("#code").val()!=sessionStorage.codefour){
+				mui.toast('图形验证码错误！')
+			}else if($("#code").val()==''||$("#zc_zijin").val()==''){
+				mui.toast('验证码不能为空！')
+			}else if($("#zc_xinmi").val()==''){
+				mui.toast('密码不能为空！')
+        	}else{
+        		$.ajax({
+					url:jc+"/Home/Api/register",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						phone:$("#zc_iphone").val(),
+						nickname:$("#zc_name").val(),
+						t_id:$("#zc_anquan").val(),
+						password:$("#zc_xinmi").val(),
+						smscode:$("#zc_zijin").val(),
+						sendtime:sendtime1,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							mui.toast('注册成功');
+							window.location.href="index.html"
+						  	
+						  }else{
+					    	    mui.toast('注册失败！')
+					        }
+						
+				    },  
+				  	error:function(){
+				  		mui.toast('获取失败!')
+				  	}	 
+				})
+        	}
+        })
+         
+             
+        $('.fanhui2').click(function(){
+        	window.location.href="index.html"
+
+        	})
+        
+        
+        
+            
+       
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1934 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>jc</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<script src="src/js/jquery-2.js"></script>
+		<script src="src/js/mui.min.js"></script>
+		<link rel="stylesheet" href="src/css/publiccss.css">
+		<link rel="stylesheet" href="src/css/bjfairs.css">
+		<link rel="stylesheet" href="src/css/hometop.css">
+		<style type="text/css">
+			.yx_lucky_img1{
+				background: url(src/img/0600/pai@2x.png);
+				background-size: 100% 100%;
+			}
+			.yx_lucky_img2{
+				background: url(src/img/0600/niu@2x.png);
+				background-size: 100% 100%;
+			}
+			.yx_lucky_img3{
+				background: url(src/img/0600/san@2x.png);
+				background-size: 100% 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+	 <div id="divmusic"></div>
+	<audio id="audio" src="src/mp3/duang.mp3" style="display:none"></audio>
+		<div class="bjfairs">
+			<div class="container container2">
+
+				<div class="Home-top">
+					<!--<div class="container2">-->
+					<div class="bjxz">
+						<!--<router-link to="/home">-->
+						<div class="yxfanhui" onclick="sheng()"></div>
+						<!--</router-link>-->
+						<div class="user user2">
+							<div>
+							<span class="bjtou"></span>
+							<span><p class="user_name">00001</p></span>
+							</div>
+							
+							<span class="bjyuan"></span>
+							<span><p class="user_money" style="width: 0.1rem">000</p></span>
+						</div>
+						<div class="top" onclick="sheng()">
+							<span id="up_vip"></span>
+							<span id="up_withdrawals"></span>
+							<span id="top_up"></span>
+						</div>
+					</div>
+
+					<div class="t_huiyuan">
+			<div class="t_top">
+				<p class="t_top_b">开通会员</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+			<div class="t_con1">
+				<div class="t_vip_time">
+					<p class="t_vip_bj"><span class="vip_yuan vip_yuan1" var="btn1"></span><span class="vip_span"><span class="vip1"></span>元宝/天</span></p>
+					<p class="t_vip_bj t_vip_bj2"><span class="vip_yuan vip_yuan2 " var="btn2"></span><span class="vip_span"><span class="vip10"></span>元宝/10天</span></p>
+					<p class="t_vip_bj"><span class="vip_yuan vip_yuan3" var="btn3"></span><span class="vip_span"><span class="vip30">8</span>元宝/月</span></p>
+					<p class="t_vip_bj t_vip_bj2"><span class="vip_yuan vip_yuan4" var="btn4"></span><span class="vip_span"><span class="vip365">8</span>元宝/年</span></p>
+				</div>
+				
+				<div class="clear"></div>
+				<div class="tac_p">请选择充值方式</div>
+				<div class="t_vip_zhifu">
+					<p class="t_vip_zfbj"><span style="margin-left: 0.35rem;">元宝：</span><span class="user_money">00</span>
+						<span class="zf_yuan zf_yuan1"></span></p>
+					<!--<p class="t_vip_zfbj"><span class="zf_tu zf_tu1"></span> &nbsp;&nbsp;&nbsp;微信支付
+						<span class="zf_yuan zf_yuan1"></span></p>
+					<p class="t_vip_zfbj"><span class="zf_tu zf_tu2"></span> &nbsp;&nbsp;&nbsp;支付宝
+						<span class="zf_yuan zf_yuan1"></span></p>-->
+				</div>
+			</div>
+			<div class="zf_for" onclick="sheng()">
+				<input type="" name="" id="zf_for1" value="取消" readOnly="true" />
+				<input type="" name="" id="zf_for2" value="确认" readOnly="true" />
+			</div>	
+		</div>
+
+					<div class="t_tikuan">
+			<div class="t_top">
+				<p class="t_top_b">申请提款</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+		
+		<div class="tk_dl">	
+		<div class="lo_in4 lo_in10">
+				<i></i><input type="" name="" id="cz_jine" value="" placeholder="请输入提款金额"/><p class="imgyan"><span class="imgyan2"></span></p>
+			</div>
+		</div>
+		<div class="t_vip_zhifu">
+					<p class="t_vip_zfbj">
+						<span class="zf_tu zf_tu2"></span>
+						 &nbsp;&nbsp;&nbsp;支付宝
+						 <span class="zf_yuan zff_yuan1"></span>
+						 <span class="bdwx bdwxzf">未绑定，前往绑定 
+						 <img src="src/img/back@2x.png" alt=""  /></span>
+					</p>
+					<p class="t_vip_zfbj" id="tt_wxbj"><span class="zf_tu zf_tu1"></span> &nbsp;&nbsp;&nbsp;微信<span class="zf_yuan wxh_yuan1"></span><span class="bdwx bdwxwx">未绑定，前往绑定 <img src="src/img/back@2x.png" alt=""  /></span></p>
+					
+					<p class="t_vip_zfbj" id="tt_yinh">
+						<span class="zf_tu zf_tu3"></span>
+						 &nbsp;&nbsp;&nbsp;银行卡
+						<span class="zf_yuan yhk_yuan1"></span>
+						<span class="bdwx bdwxyh">未绑定，前往绑定<img src="src/img/back@2x.png" alt=""/></span>
+					</p>
+			</div>
+			
+			
+			<div class="tk_for"onclick="sheng()">
+				<input type="" name="" id="tk_for1" value="取消" readOnly="true" />
+				<input type="" name="" id="tk_for2" value="确认"  readOnly="true"/>
+			</div>
+		</div>
+
+					<div class="t_chong">
+			<div class="t_top">
+				<p class="t_top_b">账户充值</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+			<div class="tac_p">请选择充值方式</div>
+			<div class="t_vip_zhifu">
+					<p class="t_vip_zfbj"><span class="zf_tu zf_tu1"></span> &nbsp;&nbsp;&nbsp;微信支付<span class="zf_yuan zf_yuan1"></span></p>
+					<p class="t_vip_zfbj"><span class="zf_tu zf_tu2"></span> &nbsp;&nbsp;&nbsp;支付宝<span class="zf_yuan zf_yuan1"></span></p>
+				</div>
+			<div class="cz_dl">	
+			<div class="lo_in">
+				<i></i><input type="" name="" id="cz_wx" value="" placeholder="请输入微信号/支付宝号"/>
+			</div>
+			<div class="lo_in2 lo_in11">
+				<i></i><input type="" name="" id="cz_jine" value="" placeholder="请输入充值金额"/><p class="imgyan"><span class="imgyan2"></span></p>
+			</div>
+			</div>
+			<div class="cz_for" onclick="sheng()">
+				<input type="" name="" id="cz_for1" value="取消"  readOnly="true"/>
+				<input type="" name="" id="cz_for2" value="确认"  readOnly="true"/>
+			</div>	
+		</div>
+
+					<div class="tt_yin">
+			<div class="t_top">
+				<p class="t_top_b">申请提款至银行卡</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+			<div class="tt_con">
+				<div class="t_vip_yh">
+					<p class="t_vip_yhbj"><span style="margin-left: 0.35rem;">中国建设银行：</span>尾号<span class="" >7060</span><span class="zf_yuan yh_yuan1"></span></p>
+					
+				</div>
+			</div>
+			<div class="clear"></div>
+			
+		
+			<div class="tac_yin" onclick="bank()"><img src="src/img/jia@2x.png" alt="" /> &nbsp;&nbsp;添加银行卡</div>
+			<div class="tt_for"onclick="sheng()">
+				<input type="" name="" id="tt_for1" value="取消"  readOnly="true"/>
+				<input type="" name="" id="tt_for2" value="确认"  readOnly="true"/>
+			</div>
+		</div>
+			
+			<div class="tt_wx">
+			<div class="t_top">
+				<p class="t_top_b">绑定微信号</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+			<div class="tk_dl">	
+				<div class="lo_in4">
+					<input type="" name="" id="wxID" value="" placeholder="请输入微信号"/>
+				</div>
+			</div>
+			<div class="tt_wx_for" onclick="sheng()">
+				<input type="" name="" id="tt_wx_for1" value="取消" readOnly="true"/>
+				<input type="" name="" id="tt_wx_for2" value="确认" readOnly="true"/>
+			</div>
+		</div>
+
+					<div class="bjj"></div>
+				</div>
+
+				<div class="clera"></div>
+
+				<div class="yx_game">
+					<ul class="ul1" onclick="sheng()">
+						<li class="ul1_li1 yx_xs1">
+							<!--<span class="bj_wenzi1"><span class="ul1_span1"></span> 牌九</span>-->
+						</li>
+						<li class="ul1_li2">
+							<!--<span class="bj_wenzi2"><span class="ul1_span2"></span> 牛牛</span>-->
+						</li>
+						<li class="ul1_li3">
+							<!--<span class="bj_wenzi3"><span class="ul1_span3"></span> 三公</span>-->
+						</li>
+					</ul>
+
+					<div class="clera"></div>
+
+					<div class="paijiu">
+						<ul class="ul2 ul_paijiu" onclick="sheng()">
+							<li class="ul2_li1 open2">底注:10
+
+							</li>
+							<li class="ul2_li2">底注:100</li>
+							<li class="ul2_li3">体验场</li>
+						</ul>
+						
+						<div class="yx_s yx_paijiu open3" id="pj10">
+
+								
+							<div class="select select_sc1">
+								<span class="yx_s_zhuang zhuang1"></span>
+								<span class="yx_s_wenzi">新葡京1</span>
+								<span class="yx_s_img yx_lucky_img1"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu redu1"></span>
+							</div>
+									
+						</div>
+
+						<div class="yx_s yx_paijiu" id="pj100">
+							<div class="select">
+								<span class="yx_s_zhuang"></span>
+								<span class="yx_s_wenzi">永利皇宫1</span>
+								<span class="yx_s_img11"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu"></span>
+							</div>
+						</div>
+
+					</div>
+					<!--paijiu END-->
+
+					<div class="niuniu">
+						<ul class="ul2 ul_niu" onclick="sheng()">
+							<li class="ul2_li1 open2">底注:10
+
+							</li>
+							<li class="ul2_li2">底注:100</li>
+							<li class="ul2_li3">体验场</li>
+						</ul>
+
+						<div class="yx_s yx_niu open3" id="niu10">
+
+							<div class="select select_niu1">
+								<span class="yx_s_zhuang"></span>
+								<span class="yx_s_wenzi">新葡京1</span>
+								<span class="yx_s_img yx_lucky_img2"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu"></span>
+							</div>
+
+						</div>
+
+						<div class="yx_s yx_niu" id="niu100">
+							<div class="select">
+								<span class="yx_s_zhuang"></span>
+								<span class="yx_s_wenzi">永利皇宫1</span>
+								<span class="yx_s_img22"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu"></span>
+							</div>
+
+						</div>
+						<div class="yx_s yx_niu" id="niu1">
+
+						</div>
+					</div>
+					<!--niuniu END-->
+
+					<div class="sangong">
+						<ul class="ul2 ul_sangong" onclick="sheng()">
+							<li class="ul2_li1 open2">底注:10
+
+							</li>
+							<li class="ul2_li2">底注:100</li>
+							<li class="ul2_li3">体验场</li>
+						</ul>
+						<div class="yx_s yx_sangong open3" id="san10">
+							
+								<div class="select select_sg1">
+									<span class="yx_s_zhuang"></span>
+									<span class="yx_s_wenzi">新葡京1</span>
+									<span class="yx_s_img yx_lucky_img3"></span>
+									<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+									<span class="yx_s_redu"></span>
+								</div>
+
+						</div>
+
+						<div class="yx_s yx_sangong" id="san100">
+							<div class="select">
+								<span class="yx_s_zhuang"></span>
+								<span class="yx_s_wenzi">永利皇宫1</span>
+								<span class="yx_s_img33"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu"></span>
+							</div>
+
+	
+						</div>
+						<div class="yx_s yx_sangong" id="san1">
+							<div class="select">
+								<span class="yx_s_zhuang"></span>
+								<span class="yx_s_wenzi">体验场1</span>
+								<span class="yx_s_img yx_s_img3"></span>
+								<span class="yx_s_r"><span class="yx_s_ren">0</span>人</span>
+								<span class="yx_s_redu"></span>
+							</div>
+						</div>
+					</div>
+					<!--sangong END-->
+				</div>
+
+			</div>
+		</div>
+
+		<script src="src/js/publicjs.js"></script>
+		<script src="src/js/api.js"></script>
+		<script src="src/js/alert.js"></script>
+		<script>
+		$(".yxfanhui").click(function(){
+				setTimeout(function(){
+					window.location="home.html"
+				},200)
+			})	
+		var qihaoft = localStorage.getItem("qihaoft")
+		var token = localStorage.getItem("token")
+			
+			function pj10(){
+				localStorage.roomid = 13;
+				localStorage.tiaozhuan="sc-pj-s10.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			
+			
+			function pj100(){
+				localStorage.roomid = 10;
+				localStorage.tiaozhuan="sc-pj-s1.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+							
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+
+			
+			
+			function pj1(){
+				localStorage.roomid = 16;
+				localStorage.tiaozhuan="sc-pj-s1.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function niu10(){
+				localStorage.roomid = 14;
+				localStorage.tiaozhuan="sc-niu-s10.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+						
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function niu100(){
+				localStorage.roomid = 11;
+				localStorage.tiaozhuan="sc-niu-s1.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function niu1(){
+				localStorage.roomid = 17;
+				localStorage.tiaozhuan="sc-niu-ti.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function san10(){
+				localStorage.roomid = 15;
+				localStorage.tiaozhuan="sc-sg-s10.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function san100(){
+				localStorage.roomid = 12;
+				localStorage.tiaozhuan="sc-sg-s1.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			function santi(){
+				localStorage.roomid = 18;
+				localStorage.tiaozhuan="sc-sg-ti.html"
+				var roomid = localStorage.getItem("roomid")
+				var tiaozhuan = localStorage.getItem("tiaozhuan")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						number: qihaoft,
+						roomid: roomid,
+					},
+					success: function(result) {
+							console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							if(result.data.roombets==null){
+							}else{
+								var betsc = result.data.roombets.length;
+							}
+
+							if(result.data.ubets==null){
+							}else{
+								var userjing = result.data.ubets.length;
+							}
+
+							localStorage.betsc=betsc;
+							localStorage.userjing=userjing;
+							if(result.data.roombets.onejincai==null){
+								localStorage.touzhu0='';	
+							}else{
+								localStorage.touzhu0=result.data.roombets.onejincai;
+							}
+							if(result.data.roombets.twojincai==null){
+								localStorage.touzhu1='';	
+							}else{
+								localStorage.touzhu1=result.data.roombets.twojincai;
+							}
+							if(result.data.roombets.threejincai==null){
+								localStorage.touzhu2='';	
+							}else{
+								localStorage.touzhu2=result.data.roombets.threejincai;
+							}
+							if(result.data.roombets.fourjincai==null){
+								localStorage.touzhu3='';	
+							}else{
+								localStorage.touzhu3=result.data.roombets.fourjincai;
+							}
+							if(result.data.roombets.fivejincai==null){
+								localStorage.touzhu4='';	
+							}else{
+								localStorage.touzhu4=result.data.roombets.fivejincai;
+							}
+							
+							
+							
+							if(result.data.ubets.onejincai==null){
+								localStorage.bentouzhu0='';	
+							}else{
+								localStorage.bentouzhu0=result.data.ubets.onejincai;
+							}
+							if(result.data.ubets.twojincai==null){
+								localStorage.bentouzhu1='';	
+							}else{
+								localStorage.bentouzhu1=result.data.ubets.twojincai;
+							}
+							if(result.data.ubets.threejincai==null){
+								localStorage.bentouzhu2='';	
+							}else{
+								localStorage.bentouzhu2=result.data.ubets.threejincai;
+							}
+							if(result.data.ubets.fourjincai==null){
+								localStorage.bentouzhu3='';	
+							}else{
+								localStorage.bentouzhu3=result.data.ubets.fourjincai;
+							}
+							if(result.data.ubets.fivejincai==null){
+								localStorage.bentouzhu4='';	
+							}else{
+								localStorage.bentouzhu4=result.data.ubets.fivejincai;
+							}
+
+							window.location.href=tiaozhuan
+							
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+		
+
+			window.onload = function() {
+			var token = localStorage.getItem("token")
+				localStorage.bjsca=2;
+			
+			$.ajax({
+					url: jc + "/Home/Api/roomlist",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token:token,
+						game:2,
+					},
+					success: function(result) {
+						console.log(JSON.stringify(result));
+						if(result.code == 200) {
+					var res=result.data;
+					var pjshi='';var niushi='';var sanshi='';
+					var pjbai='';var niubai='';var sanbai='';
+					var pjti='';var niuti='';var santi='';
+	
+					for(i=0;i<res.length;i++){
+						
+						var k=1;
+						var redu=("yx_s_redu");
+						
+						var zhuang='';
+						
+						if(result.data[i].type==1){
+							if(result.data[i].qitou==10){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								pjshi+='<div class="select select_sc1"  onclick="pj10()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'新葡京'+'</span>'+'<span class="yx_s_img yx_lucky_img1"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_1">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#pj10").html(pjshi)
+						
+						if(result.data[i].type==1){
+							if(result.data[i].qitou==100){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								pjbai+='<div class="select select_sc1"  onclick="pj100()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'永利皇宫'+'</span>'+'<span class="yx_s_img yx_lucky_img1"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_2">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#pj100").html(pjbai)
+						if(result.data[i].type==1){
+							if(result.data[i].qitou==0){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								pjti+='<div class="select select_sc1"  onclick="pj1()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'体验场'+'</span>'+'<span class="yx_s_img yx_lucky_img1"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_3">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#pj1").html(pjti)
+						
+						
+						if(result.data[i].type==2){
+							if(result.data[i].qitou==10){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								niushi+='<div class="select select_sc1"  onclick="niu10()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'新葡京'+'</span>'+'<span class="yx_s_img yx_lucky_img2"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_11">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#niu10").html(niushi)
+						if(result.data[i].type==2){
+							if(result.data[i].qitou==100){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								niubai+='<div class="select select_sc1"  onclick="niu100()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'永利皇宫'+'</span>'+'<span class="yx_s_img yx_lucky_img2"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_22">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#niu100").html(niubai)
+						
+						if(result.data[i].type==2){
+							if(result.data[i].qitou==0){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								niuti+='<div class="select select_sc1"  onclick="niu1()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'体验场'+'</span>'+'<span class="yx_s_img yx_lucky_img2"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_33">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#niu1").html(niuti)
+						
+						
+						
+						
+						
+						if(result.data[i].type==3){
+							if(result.data[i].qitou==10){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								sanshi+='<div class="select select_sc1"  onclick="san10()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'新葡京'+'</span>'+'<span class="yx_s_img yx_lucky_img3"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_111">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#san10").html(sanshi)
+						if(result.data[i].type==3){
+							if(result.data[i].qitou==100){
+								sanbai+='<div class="select select_sc1"  onclick="san100()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'永利皇宫'+'</span>'+'<span class="yx_s_img yx_lucky_img3"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_222">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#san100").html(sanbai)
+						
+						if(result.data[i].type==3){
+							if(result.data[i].qitou==0){
+								if(20>result.data[i].onlineuser){
+									k=1;
+								}else if(40>result.data[i].onlineuser){
+										k=2;
+								}else if(60>result.data[i].onlineuser){
+									k=3;
+								}else if(80>result.data[i].onlineuser){
+									k=4;
+								}else if(90>result.data[i].onlineuser){
+									k=5;
+								}else if(100>result.data[i].onlineuser){
+									k=6
+								}
+								if(result.data[i].nickname==null){
+									
+								}else{	
+									zhuang='yx_s_zhuangj';
+								}
+								santi+='<div class="select select_sc1"  onclick="santi()">'+
+								"<span class='yx_s_zhuang "+zhuang+"'>"+
+								'</span>'+'<span class="yx_s_wenzi">'+
+								'体验场'+'</span>'+'<span class="yx_s_img yx_lucky_img3"></span>'+'<span class="yx_s_r"><span class="yx_s_ren_333">'+result.data[i].onlineuser+'</span>'+'人'+'</span>'+'<span class="yx_s_redu redu1"></span>'+'</div>'						
+							}
+						}
+						$("#san1").html(santi)
+
+					}	
+					
+					
+					
+				
+				//人数
+				$.ajax({
+					url: jc + "/Home/Api/roomuserlist",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						room_id:1,
+					},
+					
+					success: function(result) {
+						console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							var res = result.data.user_list;
+							var wanj= '';
+							
+							for(i=0;i<res.length;i++){
+								wanj+='<p class="wjname">'+
+								'<span>'+'</span>'+
+								res[i].nickname
+							
+							      localStorage.ren = res.length;
+							}
+						}else if(result.code == -500) {
+							localStorage.ren = 0;
+						}else{
+							mui.toast('网络异常!')
+						}
+						
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})	
+					
+					
+					
+						var zhuang=2;//是否有庄，1为有 
+						var ccc=1;//CCC等于是房间几号有庄
+						var zhuang1=$(".zhuang"+ccc);//拼接处这个class名字
+						
+						
+						if(zhuang==1){
+							zhuang1.addClass("yx_s_zhuangj")
+						}
+
+//						$(".yx_s_ren_1").text(ren)	
+
+
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+				
+				
+				var nickname = localStorage.getItem("nickname")
+				$(".user_name").text(nickname)
+				$(".right_top_name").text(nickname)
+				var phone = localStorage.getItem("phone")
+				$(".right_top_account").text(phone)
+				var balance = localStorage.getItem("balance")
+				$(".user_money").text(balance)
+				$(".right_top_money").text(balance)
+
+				var token = localStorage.getItem("token")
+				$.ajax({
+					url: jc + "/Home/Api/hall",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+					},
+					success: function(result) {
+//						console.log(JSON.stringify(result));
+						if(result.code == 200) {
+
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			}
+			
+			
+			
+			
+			
+			
+			
+
+			$(".select_sc1").click(function() {
+				var token = localStorage.getItem("token")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						roomid: 1,
+					},
+					success: function(result) {
+	//						console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							window.location.href = "sc-pj-s1.html"
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			})
+			
+			$(".select_niu1").click(function() {
+				var token = localStorage.getItem("token")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						roomid: 1,
+					},
+					success: function(result) {
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							window.location.href = "sc-niu-s1.html"
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			})
+			
+			
+			$('#up_withdrawals').click(function(){
+ 	 	var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/checkbind",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+						  if(result.data.useralipay==''){
+						  }else{
+						  	$(".bdwxzf").hide()
+						  	$(".zff_yuan1").show()
+						  }
+						  if(result.data.userwechat==''){
+						  }else{
+						  	$(".bdwxwx").hide()
+						  	$(".wxh_yuan1").show()
+						  }
+						  if(result.data.useralipay==''){
+						  }else{
+						  	$(".bdwxyh").hide()
+						  	$(".yhk_yuan1").show()
+						  }
+
+						 }else{
+						 	mui.toast('网络异常!')
+						 }
+						
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+				})
+       	 })
+		
+		$(".vip_yuan").on("click",function(){
+    if($(this).attr("var")=="btn1"){
+       var typee = 1;
+       localStorage.typee=typee;
+    }else if($(this).attr("var")=="btn2"){
+   	   var typee = 10;
+       localStorage.typee=typee;
+    }else if($(this).attr("var")=="btn3"){
+    	var typee = 30;
+       localStorage.typee=typee;
+    }else if($(this).attr("var")=="btn4"){
+    	var typee = 365;
+       localStorage.typee=typee;
+    }
+});	
+		$("#zf_for2").click(function(){
+		var balance=localStorage.getItem("balance")
+ 		var typee = localStorage.getItem("typee");
+ 		var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/vipbuy",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						type:typee,
+						token:token,
+					},
+					
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							mui.toast('购买成功!')
+							
+					var balance2=balance-result.data.amount;
+
+					$(".user_money").text(balance2)
+					$(".right_top_money").text(balance2)
+					localStorage.balance=balance2;			
+						 }else{
+						 	mui.toast('网络异常!')
+						 }
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+		})
+ 	})
+ 	//读取会员多钱
+ 	$("#up_vip").click(function(){
+ 		var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/vipinfo",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							$(".vip1").text(result.data.dayvip)
+							$(".vip10").text(result.data.tendayvip)
+							$(".vip30").text(result.data.monthvip)
+							$(".vip365").text(result.data.yearvip)
+						 }else{
+						 	mui.toast('加载失败!')
+						 }
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+		})
+ 	})
+		
+ 	 $('#tk_for2').click(function(){
+ 	 	var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/withdraw",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+						way:1,
+						amount:$("#cz_jine").val(),
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							mui.toast('提款已经提交!')
+							$(".t_tikuan").hide();
+							$(".bjj").hide()
+						 }else{
+						 	mui.toast('提款失败!')
+						 }
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+				})
+        })
+ 		 $('#cz_for2').click(function(){
+ 	 	var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/userupdate",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+						type:1,
+						alipay_id:$('#cz_wx').val(),
+						wechat_id:$('#cz_wx').val(),
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+						  	mui.toast('充值已提交')
+						 }else{
+						 	mui.toast('网络异常!')
+						 }
+						
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+				})
+           
+        })
+			
+			
+			
+			
+			$(".select_sg1").click(function() {
+				var token = localStorage.getItem("token")
+				$.ajax({
+					url: jc + "/Home/Api/inroom",
+					type: 'post',
+					data: {
+						safecode: 'BaYue.JingCai',
+						apiversion: 'v.1.0',
+						token: token,
+						roomid: 1,
+					},
+					success: function(result) {
+						if(result.code == 200) {
+							localStorage.nextno = result.data.nextno;
+							window.location.href = "sc-sg-s1.html"
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					},
+					error: function() {
+						mui.toast('网络错误!')
+					}
+				})
+			})
+
+
+	
+
+
+			$('.fanhui2').click(function() {
+				window.location.href = "index.html"
+			})
+			$('#re_zhuce').click(function() {
+				window.location.href = "index.html"
+			})
+			$('.ul1 .ul1_li1').click(function() {
+				$('.ul1 .ul1_li1').addClass('yx_xs1')
+				$('.ul1 .ul1_li2').removeClass('yx_xs2')
+				$('.ul1 .ul1_li3').removeClass('yx_xs3')
+				$('.niuniu').css('display', 'none')
+				$('.sangong').css('display', 'none')
+				$('.paijiu').css('display', 'block')
+			})
+			$('.ul1 .ul1_li2').click(function() {
+				$('.ul1 .ul1_li2').addClass('yx_xs2')
+				$('.ul1 .ul1_li1').removeClass('yx_xs1')
+				$('.ul1 .ul1_li3').removeClass('yx_xs3')
+				$('.paijiu').css('display', 'none')
+				$('.sangong').css('display', 'none')
+				$('.niuniu').css('display', 'block')
+			})
+			$('.ul1 .ul1_li3').click(function() {
+				$('.ul1 .ul1_li3').addClass('yx_xs3')
+				$('.ul1 .ul1_li1').removeClass('yx_xs1')
+				$('.ul1 .ul1_li2').removeClass('yx_xs2')
+				$('.paijiu').css('display', 'none')
+				$('.niuniu').css('display', 'none')
+				$('.sangong').css('display', 'block')
+			})
+
+			$('.ul_paijiu li').click(function() {
+				var index = $(this).index();
+				$('.ul_paijiu li').eq(index).addClass('open2').siblings().removeClass('open2');
+				$('.yx_paijiu').eq(index).addClass('open3').siblings().removeClass('open3');
+			})
+
+			$('.ul_niu li').click(function() {
+				var index = $(this).index();
+				$('.ul_niu li').eq(index).addClass('open2').siblings().removeClass('open2');
+				$('.yx_niu').eq(index).addClass('open3').siblings().removeClass('open3');
+			})
+
+			$('.ul_sangong li').click(function() {
+				var index = $(this).index();
+				$('.ul_sangong li').eq(index).addClass('open2').siblings().removeClass('open2');
+				$('.yx_sangong').eq(index).addClass('open3').siblings().removeClass('open3');
+			})
+			
+		$('#up_withdrawals').click(function(){
+ 	 	var token=localStorage.getItem("token")
+        	$.ajax({
+					url:jc+"/Home/Api/checkbind",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+						  if(result.data.useralipay==''){
+						  }else{
+						  	$(".bdwxzf").hide()
+						  	$(".zff_yuan1").show()
+						  }
+						  if(result.data.userwechat==''){
+						  }else{
+						  	$(".bdwxwx").hide()
+						  	$(".wxh_yuan1").show()
+						  }
+						  if(result.data.useralipay==''){
+						  }else{
+						  	$(".bdwxyh").hide()
+						  	$(".yhk_yuan1").show()
+						  }
+
+						 }else{
+						 	mui.toast('网络异常!')
+						 }
+						
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+				})
+       	 })
+		
+				
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,2119 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>牛牛</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<script src="src/js/jquery-2.js"></script>
+		<script src="src/js/publicjs.js"></script>
+		<script src="src/js/mui.min.js"></script>
+		<link rel="stylesheet" href="src/css/sc-pj-s1.css">
+		<link rel="stylesheet" href="src/css/publiccss.css">
+		<link rel="stylesheet" type="text/css" href="src/css/niu-majiang.css"/>
+		<link rel="stylesheet" type="text/css" href="src/css/hometop.css"/>
+
+		<style type="text/css">
+			.newdiv {
+				color: pink;
+			}
+			
+			.zongjine11 {
+				position: absolute;
+				left: 0.2rem;
+				top: -0.5rem;
+			}
+			
+			.zongjine22 {
+				position: absolute;
+				left: 0.2rem;
+				top: 2.6rem;
+			}
+			 .woyeshidaoji,
+ .woyeshidaojissc {
+ 	position: absolute;
+ 	left: 3.3rem;
+ 	top: 3.3rem;
+ 	font-size: 0.6rem;
+ 	color: #f2af00;
+ }
+  .buwoyeshidaoji,
+ .buwoyeshidaojissc {
+ 	position: absolute;
+ 	left: 2.6rem;
+ 	top: 3.5rem;
+ 	font-size: 0.28rem;
+ 	color: #f2af00;
+ 	display: none;
+ }
+ 
+  .zongjine11 {
+position: absolute;
+left: 3rem;
+top: -0.5rem;
+}
+			
+.zongjine22 {
+position: absolute;
+left: 3rem;
+top: 2.6rem;
+	}
+	 .benzongjine1{
+ 	position: absolute;
+ 	top: -0.5rem;
+    left: 4rem;
+ }
+  .benzongjine2{
+ 	position: absolute;
+ 	left: 4rem;
+    top: 2.6rem;
+ }
+		</style>
+
+	</head>
+
+	<body>
+		
+		<div id="wo1"></div><div id="wo2"></div><div id="wo3"></div><div id="wo4"></div><div id="wo5"></div>
+			<div id="wo6"></div><div id="wo7"></div><div id="wo8"></div><div id="wo9"></div><div id="wo10"></div>
+			<div id="divmusic"></div>
+		<audio id="audio" src="src/mp3/duang.mp3" style="display:none"></audio>
+		
+		<div class="bjj"></div>	
+		<div class="tuicchu">
+						<div class="t_top">
+							<p class="t_top_b">返回</p>
+							<p class="t_top_x">&times;</p>
+						</div>
+						
+						<div>
+							<p style="text-align: center;margin-top:1.2rem;">您的资金将在本局结束后返还<br />确定退出？
+							</p>
+						</div>
+						
+						<div class="cz_for">
+							<div id="cc_for1"  class="cc_for1"  />取消</div>
+							<div id="cc_for2" onclick="home()"/>确认</div>
+						</div>
+					</div>
+		<div class="fhhome" ><p></p></div>
+		<div class="fhhome2" ></div>
+		<div class="jiluaaa"><p></p></div>
+		<div class="shengyin"></div>
+		<audio src="src/mp3/duang.mp3" id="audiosrc2"></audio>
+		<div class="woyeshidaoji0"><p class="woyeshidaoji3"></p></div>
+		
+		<div class="fangjianqi">
+			<!--<p>北京赛车-<span class="bjqh"></span>期-牛牛</p>-->
+		</div>
+		
+		
+		<div class="szhuang" onclick="szhuang()"><p class="shangzhuang">我要上庄</p></div>
+		
+		<div class="szliebiao">
+			<p class="shangzhuang">上庄列表</p>
+			<div class="szlb">
+				<p class="szlb1"></p>
+				<p class="szlb2"></p>
+				<p class="szlb3"></p>
+				<p class="szlb4"></p>
+				<p class="szlb5"></p>
+			</div>
+		</div>
+		<div class="benjujiesuan">
+						<div class="t_top">
+							<p class="t_top_b">本局结算</p>
+							<p class="t_top_x">&times;</p>
+						</div>
+		<div class="jiesuan_con">
+			<div style="margin-left: 0.6rem;"class="jie_zhuang"> 
+				<span class="jie_l">庄家收益：</span><span class="jie_r zhuang_r">2</span>
+			</div>
+			<div style="margin-left: 0.6rem;" class="jie_xian">
+			</div>
+		</div>
+		<div class="jiesuan_ben">
+			<p>我的收益：<span class="jiesuan_shouru">0</span></p>
+		</div>
+	</div>
+
+			<div class="t_chong">
+						<div class="t_top">
+							<p class="t_top_b">账户充值</p>
+							<p class="t_top_x">&times;</p>
+						</div>
+						<div class="tac_p">请选择充值方式</div>
+						<div class="t_vip_zhifu">
+							<p class="t_vip_zfbj"><span class="zf_tu zf_tu1"></span> &nbsp;&nbsp;&nbsp;微信支付<span class="zf_yuan zf_yuan1"></span></p>
+							<p class="t_vip_zfbj"><span class="zf_tu zf_tu2"></span> &nbsp;&nbsp;&nbsp;支付宝<span class="zf_yuan zf_yuan1"></span></p>
+						</div>
+						<div class="cz_dl">
+							<div class="lo_in">
+								<i></i><input type="" name="" id="cz_wx" value="" placeholder="请输入微信号/支付宝账户" />
+							</div>
+							<div class="lo_in2 lo_in11">
+								<i></i><input type="" name="" id="cz_jine" value="" placeholder="请输入充值金额" />
+								<p class="imgyan"><span class="imgyan2"></span></p>
+							</div>
+						</div>
+						<div class="cz_for">
+							<input type="" name="" id="cz_for1" value="取消" />
+							<input type="" name="" id="cz_for2" value="确认" />
+						</div>
+					</div>
+			<div class="t_zj" >
+						<div class="t_top">
+							<p class="t_top_b">庄家</p>
+							<p class="t_top_x">&times;</p>
+						</div>
+						
+					<div class="tk_dl">						
+						<div class="lo_in4 lo_in11">
+						<i></i><input type="number" name="" id="zhuangjin" value="" placeholder="请输入上庄金额" />
+					</div>			
+						</div>	
+						
+						<div class="cz_for">
+							<input type="" name="" id="zj_for1" value="取消" />
+							<input type="" name="" id="zj_for2" value="确认" />
+						</div>
+			</div>			
+			
+		<div class="sc_pj_s1">
+			
+			<div id="head"></div>
+			<div class="sc_niu_top">
+				<div id="if1"> 
+					<div id="if2"> 
+						<!--<iframe src="http://jc.bayuenet.com/Home/Index/index.html" style="width:375px;height:204px;" scrolling="no" id="if3" ></iframe>--> 
+					</div>
+				</div>
+				<div class="saidao1"></div>
+				<div class="saidao2"></div>
+			</div>
+			<div class="clera"></div>
+			<div class="sc_niu_xia">
+				<div class="clera"></div>
+
+				<div class="sc_di sc_niu_di">
+<div class="sc_con">
+						
+						<div class="sc_niu sc_niu_1" onclick="sheng();">
+							<div class="zongjine11"></div>
+							<div class="benzongjine1"></div>
+							<div class="mingci mingci11"></div>
+							<div class="dianshu"><i><span class="dianshu1"></span>点</i></div>
+						</div>
+						<div class="sc_niu sc_niu_2" onclick="sheng();">
+							<div class="zongjine22"></div>
+							<div class="benzongjine2"></div>
+							<div class="mingci mingci22"></div>
+							<div class="dianshu"><i><span class="dianshu5"></span>点</i></div>
+						</div>
+						
+						<div class="bukesc_niu bukesc_niu_1">总金额<p class="zhuanqian"></p></div>
+						<div class="bukesc_niu bukesc_niu_2">总金额<p class="zhuanqian"></p></div>
+						
+					</div>
+
+					<div class="dibu">
+						<div class="di_l">
+							<p><span class="yhbj"></span> <span id="yhid">用户001</span></p>
+							<p><span class="yhyb"></span> <span id="yhwing">2760</span></p>
+						</div>
+
+						<div class="di_r">
+							<input type="button" name="" id="guize" value="" />
+							<input type="button" name="" id="wanjia" value="" />
+							<div class="userchouma">
+								<ul class="userchoumali"></ul>
+							</div>
+						</div>
+					</div>
+					<div class="qiehuan"></div>
+						
+						<div class="datu">
+							<div class="daquan"></div>
+							<div class="bjsc1">
+								<span class="dbj1"></span>
+								<span class="dbj2"></span>
+							</div>
+							
+							<div class="bjsc2">
+								<span class="dcqss1"></span>
+								<span class="dcqss2"></span>
+							</div>
+							<div class="bjsc3">
+								<span class="xyft1"></span>
+								<span class="xyft2"></span>
+							</div>
+							<div class="bjsc4"></div>
+							<div class="bjsc11 bjscgy"></div>
+							<div class="bjsc22 bjscgy"></div>
+							<div class="bjsc33 bjscgy"></div>
+						</div>
+					<div class="touzhu">
+						<ul class="ul111">
+							<li class="li1">
+								<img src="src/img/0403/1.png" alt="" />
+								<div class="lixz liquan"></div>
+							</li>
+							<li class="li2">
+								<img src="src/img/0403/2.png" alt="" />
+								<div class="lixz"></div>
+							</li>
+							<li class="li3">
+								<img src="src/img/0403/3.png" alt="" />
+								<div class="lixz"></div>
+							</li>
+							<li class="li4">
+								<img src="src/img/0403/4.png" alt="" />
+								<div class="lixz"></div>
+							</li>
+							<li class="li5">
+								<img src="src/img/0403/5.png" alt="" />
+								<div class="lixz"></div>
+							</li>
+						</ul>
+
+						<div class="li_r">
+							<div id="chong"></div>
+							<p>充值</p>
+						</div>
+					</div>
+					<div class="touzhu2">
+						<ul class="ul222">
+							<li class="li11"></li>
+							<li class="li22"></li>
+							<li class="li33"></li>
+							<li class="li44"></li>
+							<li class="li55"></li>
+						</ul><br />
+					</div>
+					<div class="woyeshidaoji"></div>
+					<div class="buwoyeshidaoji">
+						封盘中.等待开奖
+					</div>
+					<div class="bukexuanze"></div>
+					<div class="bukexuanzezhuang"></div>
+					<div class="bukemiao"></div>
+					<div class="shaizi"></div>
+					<style type="text/css">
+						.buwoyeshidaojiji{
+							position: absolute;
+							top: 3.35rem;
+						}
+					</style>
+					
+
+					<div class="kaijiiang">
+						<div class="kai_top">
+							<ul class="kai_ul">
+								<li class="kj1 kailixz">开奖结果</li>
+								<li class="kj2">官方结果</li>
+								<li class="kj3">游戏规则</li>
+							</ul>
+							<p class="t_top_x">&times;</p>
+						</div>
+
+						<div class="kjjg">
+							<ul class="men_ul">
+								<li style="width: 50%;">前区</li>
+								<li style="width: 50%;">后区</li>
+							</ul>
+							<div class="shujuwarp">
+							<div class="shuju">
+								<p><span class="qihao">170418053</span>期</p>
+								<p><span class="sc_time">2017-04-18 17:29:25</span></p>
+								<ul class="shuju_ul">
+									<li style="width: 50%;"><span class="sc_dianshu">0</span><br /><span class="sc_mingci sc_mc1"></span></li>
+									<li style="width: 50%;"><span class="sc_dianshu">5</span><br /><span class="sc_mingci sc_mc2"></span></li>
+								</ul>
+								
+							</div>
+						</div>
+							
+						</div>
+
+						<div class="gfjg">
+							<div class="gfshuju">
+								<p><span class="qihao">170418053</span>期</p>
+								<p><span class="sc_time">2017-04-18 17:29:25</span></p>
+								<div class="clera"></div>
+								<ul class="gf_ul">
+									<li class="gf_li gf_1"></li>
+									<li class="gf_li gf_2"></li>
+									<li class="gf_li gf_3"></li>
+									<li class="gf_li gf_4"></li>
+									<li class="gf_li gf_5"></li>
+									<li class="gf_li gf_6"></li>
+									<li class="gf_li gf_7"></li>
+									<li class="gf_li gf_8"></li>
+									<li class="gf_li gf_9"></li>
+									<li class="gf_li gf_0"></li>
+								</ul>
+							</div>
+							
+						</div>
+					
+						<div class="yxgz">
+							<div class="gzp">
+								<p>北京赛车-牛牛 游戏规则</p>
+								<p>开奖时间：每天9:00-23:57，每五分钟开奖一次，每天开奖179期</p>
+								<p>北京赛车PK10，分十条车道</p>
+								<p>采集①②③④⑤车道为前区牌</p>
+								<p>采集⑥⑦⑧⑨⑩车道为后区牌</p>
+								<p>注：完全按照市面的玩法，任意组合一门3张牌，如能组合为10点或10的倍数，则视为有牛，剩余俩张牌组合数字个位数为几，则为"牛几"</p>
+								<p>如任意3张牌组合不出10点或者是10的倍数，则为无牛</p>
+								<p>如果无牛，则比较数值大小定输蠃，⑩车道最大，①车道最小</p>
+								<p>如：前区开出①②③④⑤，②③⑤①④ ，有牛，牛5</p>
+								<p>后区开出⑥⑦⑧⑨⑩，⑥⑦⑧⑨⑩，任 意三张牌组合不能为10,则为无牛</p>
+								<p>则:前区牛5,后区无牛，前区蠃</p>
+								<p>如果出现有牛，牛数相同的情况下，则 视开出数值有⑩的那门牌蠃 如果都无牛，则视开出数值有⑩那门牌赢</p>
+							</div>
+						</div>
+
+					</div>
+				
+				<div class="wanjialiebiao">
+			<div class="t_top">
+				<p class="t_top_b">玩家列表</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+				<div class="wanjia_con">
+						<div style="text-align: center;padding-top: 0.3rem;">当前房间人数：<span id="renhsu">1</span></div>
+					<div class="wanjianame">
+						
+					</div>
+					<div class="wjfanye" style="overflow: auto;">
+						<!--<div class="dleft"></div>
+							<p>1</p>
+						<div class="dright"></div>-->
+					</div>
+				</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="src/js/api.js"></script>
+		<script type="text/javascript" src="src/js/alert.js"></script>
+
+		<script type="text/javascript">
+			var scone = 0;
+			var sctwo = 0;
+			var scthree = 0;
+			var scfour = 0;
+			var scfive = 0;
+			var del_points=0;
+			var zong11 = 0;
+			var zong22 = 0;
+			var jia=1;
+			var ssckaijiang = 0;
+			var sscfengpan = 0;
+			var	quanbude=0;
+			var	benrenquan1=0;
+			var	benrenquan2=0;
+			var shishis=0;
+		var waishishis=0;
+			var phone = localStorage.getItem("phone")
+			var bjsca=localStorage.getItem("bjsca");
+			var uid = phone;
+			var roomid = localStorage.getItem("roomid")
+			var ws
+	ws = new WebSocket("ws://125.65.108.168:7272");
+ws.onopen = function() {
+	console.log("连接成功");
+    ws.send('tom');
+    console.log("给服务端发送一个字符串：tom");
+};
+ws.onmessage = function(e) {
+//	console.log(e)
+    var data = eval("(" + e.data + ")");
+//    console.log("收到服务端的消息11：" + data.client_id); 
+	switch(data['type']) {
+		// 服务端ping客户端		
+		case 'ping':
+			ws.send('{"type":"pong"}');
+			console.log("服务给发了一个ping");
+			break;
+
+		//统计人数
+		case 'count':
+			if(data.content){
+				console.log("服务给发了一个count");
+			}
+			break;
+		// 登录 更新用户列表
+		case 'login':
+			//console.log(data['client_name'] + "登录成功");
+			break;
+		case 'init':
+			// 利用jquery发起ajax请求，将client_id发给后端进行uid绑定
+			$.post('http://jc.bayuenet.com/Home/Order/bind',{client_id: data.client_id,uid: uid,roomid: roomid},function(data){}, 'json');
+			console.log("服务给发了一个init,client_id是" + data.client_id + '房间ID是' + roomid + '用户ID是' + uid);
+			break;
+		// 发言
+		case 'say':
+			say(data['uid'],data['from_client_name'], data['head_img_url'], data['content'], data['time']);
+			break;
+		case 'ownerbets':
+		console.log("ownerbets的消息：" + e.data);
+		
+		localStorage.pjzhuangtype=8;
+
+			var bjsca = localStorage.getItem("bjsca");
+			localStorage.maxbalance = data.data.maxbalance;
+
+			var xianjia = Number(localStorage.getItem("xianjia"))
+			if( xianjia<maxbalance<1000000){
+				$(".bukexuanze").hide()
+			}
+			//记下房主的ID
+			localStorage.fangzhuid=data.data.user_id;
+			if(data.data.user_id==uid){
+				//庄家本人
+				if(data.data.ownerbets==null||data.data.ownerbets==''){
+					
+					$(".zhuanqian").html(data.data.maxbalance)
+					$(".bukesc_niu").show()
+//					庄家选择中
+					mui.toast('请庄家选择下注区域，10S后将随机选择')
+						
+					shishis=shishis+1;
+					console.log(shishis)
+					if(shishis==4){
+						setTimeout(function(){
+					var maxbalance = localStorage.getItem("maxbalance")
+							var shengzhuang = Number(localStorage.getItem("shengzhuang"))
+							
+							var shengzhuang = shengzhuang - maxbalance;
+							localStorage.shengzhuang=shengzhuang;
+							localStorage.xianjia=shengzhuang;
+					
+			   						var sd= Math.floor(Math.random()*2+1)
+									var token=localStorage.getItem("token")
+									var zuixinqihao=localStorage.getItem("zuixinqihao")
+									var zhuangjin=localStorage.getItem("zhuangjin")
+									var zhuangxuan=localStorage.getItem("zhuangxuan")
+								localStorage.sd=sd;
+								if(sd==1){
+									$(".shaizi").addClass("shaizi1")
+								}else if(sd==2){
+									$(".shaizi").addClass("shaizi2")
+								}else if(sd==3){
+									$(".shaizi").addClass("shaizi3")
+								}else if(sd==4){
+									$(".shaizi").addClass("shaizi4")
+								}else if(sd==5){
+									$(".shaizi").addClass("shaizi5")
+								}
+							
+					$.ajax({
+					url:jc+"/Home/Api/bets",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+						game:game,
+						t_id:t_id,
+						type:8,//7 牌九 8牛牛 9三公
+						del_points:zhuangjin,//竞猜下注点数
+						number:zuixinqihao,
+						roomid:roomid,//房间ID
+						jincai:sd,//随机内容12345
+						isroomowner:1,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.data.balance>del_points){
+							var yueee=result.data.balance;
+						localStorage.balance=yueee;
+							$("#yhwing").text(yueee)
+							localStorage.userid=result.data.userid;
+						
+						}
+				   },   
+				}) 	
+						},10000)
+				}
+						
+
+				}
+	
+				if(data.data.ownerbets==1){
+				//庄家选择后
+				
+					localStorage.zhuangjia=1;
+					$(".bukesc_niu").hide()
+					$('.bukesc_niu_1').show()
+					$(".zhuanqian").html(data.data.maxbalance)
+					$(".bukexuanzezhuang").hide()
+				}else if(data.data.ownerbets==2){
+					$(".bukesc_niu").hide()
+					$(".bukesc_niu_2").show()
+					$(".bukexuanzezhuang").hide()
+					$(".zhuanqian").html(data.data.maxbalance)
+				}
+				
+			var token = localStorage.getItem("token")
+			var zuixinqihao = localStorage.getItem("zuixinqihao")
+			console.log('zuixinqihao')
+			}else{
+				
+				if(data.data.ownerbets==null){
+					$(".bukexuanzezhuang").show()		
+				}
+				if(data.data.ownerbets==1||data.data.ownerbets==2||data.data.ownerbets==3||data.data.ownerbets==4||data.data.ownerbets==5){
+					waishishis+=1;
+					if(waishishis==1){
+						var sd=localStorage.getItem("sd")
+								if(sd==1){
+									$(".shaizi").addClass("shaizi1")
+								}else if(sd==2){
+									$(".shaizi").addClass("shaizi2")
+								}else if(sd==3){
+									$(".shaizi").addClass("shaizi3")
+								}else if(sd==4){
+									$(".shaizi").addClass("shaizi4")
+								}else if(sd==5){
+									$(".shaizi").addClass("shaizi5")
+								}
+							var maxbalance = localStorage.getItem("maxbalance")
+							var shengzhuang = Number(localStorage.getItem("shengzhuang"))
+							
+							var shengzhuang = shengzhuang - maxbalance;
+							localStorage.shengzhuang=shengzhuang;
+							localStorage.xianjia=shengzhuang;
+						}
+				}
+				
+				if(data.data.ownerbets==1){
+				//庄家选择后
+					$('.bukesc_niu_1').show()
+					$(".zhuanqian").html(data.data.maxbalance)
+					$(".bukexuanzezhuang").hide()
+				}else if(data.data.ownerbets==2){
+					$(".bukesc_niu_2").show()
+					$(".bukexuanzezhuang").hide()
+					$(".zhuanqian").html(data.data.maxbalance)
+				}	
+						
+			}
+			if(data.data.ownerbets=='ownerbets'){
+					$(".bukesc_pj_1").hide()
+					$(".bukesc_pj_2").hide()
+				}
+			
+			//ownerbets = null  空  有庄
+			//ownerbets = 12345   空   有庄
+			//ownerbets =ownerbets 无庄
+		break;		
+		// 用户退出 更新用户列表
+		case 'logout':
+			break;
+		case 'award':
+			var lastaward=data.award;
+			localStorage.lastaward=lastaward;
+			var qihaoo=data.no;
+			localStorage.qihaoo=qihaoo;
+			break;
+		case 'broadcast':
+			//alert('client');
+		// 调用GatewayClient发消息时直接alert出来
+		case 'admin':
+			 if(uid==data['uid']){
+
+			 }else{}
+
+			break;
+		case 'pksstop':
+			console.log("stop的消息：" + e.data);
+				var bjsca = localStorage.getItem("bjsca");
+			
+			
+			if(bjsca == 1) {
+			var kanwo = localStorage.getItem("kanwo");
+				if(kanwo==1){
+					clearTimeout(kaitime);
+					clearInterval(kaitime)
+				}
+				
+				clearTimeout(name1);
+
+				var timenum=30
+				var istime=setInterval(function(){
+					timenum=timenum-1
+					$(".woyeshidaoji0").hide();
+					$(".woyeshidaoji3").hide();
+					$(".buwoyeshidaoji").show();
+					$(".szliebiao").hide();
+					$(".bukexuanze").show();
+					$(".woyeshidaoji").html(timenum);
+					$(".woyeshidaoji").show();
+					if(timenum<=0){
+						clearInterval(istime)
+						$(".woyeshidaoji").hide()
+					}
+				},1000)
+				
+
+			}
+			
+			break;
+		case 'klftstop':
+			console.log("stop的消息：" + e.data);
+			var bjsca = localStorage.getItem("bjsca");
+			if(bjsca == 2) {
+				var kanwo = localStorage.getItem("kanwo");
+				if(kanwo==1){
+					clearTimeout(kaitime);
+					clearInterval(kaitime)
+				}
+				
+				clearTimeout(name1);
+
+				var timenum=30
+				var istime=setInterval(function(){
+					timenum=timenum-1
+					$(".woyeshidaoji0").hide();
+					$(".woyeshidaoji3").hide();
+					$(".buwoyeshidaoji").show();
+					$(".szliebiao").hide();
+					$(".bukexuanze").show();
+					$(".woyeshidaoji").html(timenum);
+					$(".woyeshidaoji").show();
+					if(timenum<=0){
+						clearInterval(istime)
+						$(".woyeshidaoji").hide()
+					}
+				},1000)
+			}
+
+			break;
+		case 'pksstart':
+			var bjsca = localStorage.getItem("bjsca");
+			var bjscstopd = localStorage.getItem("bjscstopd");
+			console.log("pksstart的消息：" + e.data);
+			if(bjsca == 1) {
+				
+				qihao2 = data.periodNumber;
+				localStorage.qihaoft = qihao2;
+				
+				localStorage.kanwo=1;
+				clearTimeout(name1);
+				var timenum=data.nexttime;
+				kaitime=setInterval(function(){
+					$(".woyeshidaoji").show();
+					$(".szliebiao").show();
+					$(".woyeshidaoji0").show();
+					$(".woyeshidaoji3").show();
+					$(".buwoyeshidaoji").hide();
+					$(".woyeshidaoji").html(timenum);
+					$(".woyeshidaoji3").html(timenum);
+					mm1 = Math.floor(timenum / 60 % 60);
+					ss1 = Math.floor(timenum % 60);
+					if(mm1 < 10) {
+						mm1 = "0" + mm1;
+					}
+					if(ss1 < 10) {
+						ss1 = "0" + ss1;
+					}
+					$(".dbj1").html(mm1);
+					$(".dbj2").html(ss1);
+					
+					
+					timenum=timenum-1
+					if(timenum<50){
+						$(".szhuang").hide()
+					}
+					if(timenum<=1){
+						$(".woyeshidaoji3").hide()
+						$(".woyeshidaoji").html('')
+						$(".dbj1").html("");
+						$(".dbj2").html('');
+//						clearInterval(kaitime)
+						clearTimeout(kaitime)
+					}
+				},1000)
+				
+				
+			}
+			break;
+		case 'klftstart':
+			var bjsca = localStorage.getItem("bjsca");
+			console.log("klftstart的消息：" + e.data);
+			qihaoft = data.periodNumber;
+			localStorage.qihaoft = qihaoft;
+			if(bjsca == 2) {
+				qihao2 = data.periodNumber;
+				localStorage.qihaoft = qihao2;
+				
+				localStorage.kanwo=1;
+				clearTimeout(name1);
+				var timenum=data.nexttime;
+				kaitime=setInterval(function(){
+					$(".woyeshidaoji").show();
+					$(".szliebiao").show();
+					$(".woyeshidaoji0").show();
+					$(".woyeshidaoji3").show();
+					$(".buwoyeshidaoji").hide();
+					$(".woyeshidaoji").html(timenum);
+					$(".woyeshidaoji3").html(timenum);
+					mm1 = Math.floor(timenum / 60 % 60);
+					ss1 = Math.floor(timenum % 60);
+					if(mm1 < 10) {
+						mm1 = "0" + mm1;
+					}
+					if(ss1 < 10) {
+						ss1 = "0" + ss1;
+					}
+					$(".dbj1").html(mm1);
+					$(".dbj2").html(ss1);
+					
+					
+					timenum=timenum-1
+				if(timenum<50){
+						$(".szhuang").hide()
+					}
+					if(timenum<=1){
+						$(".woyeshidaoji3").hide()
+						$(".woyeshidaoji").html('')
+						$(".dbj1").html("");
+						$(".dbj2").html('');
+//						clearInterval(kaitime)
+						clearTimeout(kaitime)
+					}
+				},1000)
+			}
+
+			break;
+		case 'bets':
+		var userid = localStorage.getItem("userid")
+		console.log("bets的消息：" + e.data);
+			
+		var maxbalance = localStorage.getItem("maxbalance")
+//		console.log(maxbalance)
+		$(".szhuang").hide();
+		
+		
+			if(data.jincai==1){
+			$(".zongjine11").text(data.jincaiamount)
+		}else if(data.jincai==2){
+			$(".zongjine22").text(data.jincaiamount)
+		}
+		
+		
+		var bentouzhu0 = localStorage.getItem("bentouzhu0")
+		var bentouzhu1 = localStorage.getItem("bentouzhu1")
+		var bentouzhu0 = Number(bentouzhu0)
+		var bentouzhu1 = Number(bentouzhu1)		
+			var maxbalance = localStorage.getItem("maxbalance")
+			var maxbalance = Number(maxbalance)
+			var maxbala = 100;
+			if(maxbala == 100) {
+				var zongjine = data.amount
+				var zongjine = Number(zongjine)
+
+	
+//				//得到其他闲家后来的投注	
+				quanbude += zongjine;
+				console.log(quanbude + '其他闲家投注')
+//				//闲家总投注
+
+			}
+			//	合-庄=闲
+			
+			var shengzhuang = Number(localStorage.getItem("shengzhuang"))
+			
+			xianjia = Number(quanbude)-Number(maxbalance)
+			
+			
+			
+			localStorage.xianjia = xianjia;
+			if(maxbalance < xianjia) {
+				$(".bukexuanze").show()
+				mui.toast('已经达到投注上限')
+			}
+
+		if(data.betuid==userid){
+			
+			if(data.jincai==1){
+				benrenquan1+=Number(data.amount);
+				bentouzhu0=bentouzhu0+benrenquan1;
+				$(".benzongjine1").text(bentouzhu0)
+			}else if(data.jincai==2){
+				benrenquan2+=Number(data.amount);
+				bentouzhu1=bentouzhu1+benrenquan2;
+				$(".benzongjine2").text(bentouzhu1)
+			}
+
+		}
+		
+	
+		var wl1='';var wl2='';
+		if(data.betuid==userid){
+		}else{
+			if(data.jincai==1){
+				if(data.amount==data.amount){
+					if(data.amount==1000){
+						data.amount='1q';
+					}else if(data.amount==5000){
+						data.amount='5q';
+					}else if(data.amount==10000){
+						data.amount='1wan';
+					}else if(data.amount>10001){
+						data.amount='zhuang';
+					}
+					
+					$(".userchoumali").append("<li class='li11"+scone+" dier'>"+
+						"<img src='src/img/0403/"+data.amount+"@2x.png'/>"+"</li>")
+						var t=(440+(parseInt(150*Math.random())))/100;
+						var s=(-520+(parseInt(500*Math.random())))/100;
+						$(".li11"+scone+"").animate({
+							bottom:t+'rem',
+							left:s+'rem',
+						});	
+					scone++;
+				}
+			}else if(data.jincai==2){
+				if(data.amount==data.amount){
+					if(data.amount==1000){
+						data.amount='1q';
+					}else if(data.amount==5000){
+						data.amount='5q';
+					}else if(data.amount==10000){
+						data.amount='1wan';
+					}else if(data.amount>10001){
+						data.amount='zhuang';
+					}
+					$(".userchoumali").append("<li class='li11"+scone+" dier'>"+
+						"<img src='src/img/0403/"+data.amount+"@2x.png'/>"+"</li>")
+						var t=(125+(parseInt(150*Math.random())))/100;
+						var s=(-590+(parseInt(500*Math.random())))/100;
+						$(".li11"+scone+"").animate({
+							bottom:t+'rem',
+							left:s+'rem',
+						});	
+					scone++;
+				}
+			}
+		}
+		break;
+		
+			//系统
+		case 'system':
+//		console.log("system的消息：" + e.data);
+		var bjsca=localStorage.getItem("bjsca");
+			 if(uid==data['uid']){
+//			 console.log("服务给发了一个system uid eq" + e.data);
+				console.log("哈哈哈哈我开奖失败了哈我开奖失败了")
+			 }else{
+			 	if(data.code == 'pkspjdraw'||data.code == 'pksownerpjdraw') {
+					console.log("pkspjdraw的消息：" + e.data);
+					
+					//更新余额
+						var token = localStorage.getItem("token")
+					$.ajax({
+						url: jc + "/Home/Api/checkbalance",
+						type: 'post',
+						data: {
+							safecode: 'BaYue.JingCai',
+							apiversion: 'v.1.0',
+							token: token,
+						},
+						success: function(result) {
+							console.log(JSON.stringify(result));
+							if(result.code==200){
+								$("#yhwing").text(result.data.balance)
+								localStorage.balance=result.data.balance;
+							}
+						},
+					})
+					
+//					pksownerpjdraw
+
+					if(typeof(data.code) == typeof(data.pkspjdraw)) {
+						
+					} else {
+						var ress = data.data;
+						var rens = data.data.length
+						var fangzhuid = localStorage.getItem("fangzhuid")
+						for(i = 0; i < rens; i++) {
+
+							if(data.data[i].userid == uid) {
+								$(".jiesuan_shouru").html(data.data[i].amount)
+							}
+							
+							if(data.data[i].userid == fangzhuid){
+								var zhuang_r=data.data[i].amount-(data.data[i].delamount-data.data[i].returnamount)
+								$(".zhuang_r").html(zhuang_r)
+								
+							}
+						}
+			 			
+			 			for (i=0;i<ress.length;i++) {
+			 				console.log(ress.length)
+			 				var casl='';
+			 				var jigeawnjia='';			
+				
+		
+			
+			
+	var compare = function (obj1, obj2) {
+    var val1 = obj1.amount;
+    var val2 = obj2.amount;
+    		val1 = Number(val1);
+            val2 = Number(val2);
+    if (val1 > val2) {
+        return -1;
+    } else if (val1 < val2) {
+        return 1;
+    } else {
+        return 0;
+    }            
+}
+	console.log(ress.sort(compare));
+
+		
+	
+			if(ress.length==1){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'
+			}else if(ress.length==2){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						   '<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'	
+			}else if(ress.length==3){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+			}else if(ress.length==4){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						   '<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'+
+						   '<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'+
+						   '<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						  
+			}else if(ress.length==5){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'+
+						  '<p class="wosip"><b class="jie_sz">'+'5'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+			}else if(ress.length==6){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'5'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'6'+'</b><b class="jie_l">'+ress[5].nickname+'</b><b class="jie_r">'+ress[5].amount+'</b></p>'
+						  
+			}else if(ress.length==7){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'		
+						  +'<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'5'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'6'+'</b><b class="jie_l">'+ress[5].nickname+'</b><b class="jie_r">'+ress[5].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'7'+'</b><b class="jie_l">'+ress[6].nickname+'</b><b class="jie_r">'+ress[6].amount+'</b></p>'
+			}else if(ress.length==8){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						 +'<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'5'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'6'+'</b><b class="jie_l">'+ress[5].nickname+'</b><b class="jie_r">'+ress[5].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'7'+'</b><b class="jie_l">'+ress[6].nickname+'</b><b class="jie_r">'+ress[6].amount+'</b></p>'
+						 +'<p class="wosip"><b class="jie_sz">'+'8'+'</b><b class="jie_l">'+ress[7].nickname+'</b><b class="jie_r">'+ress[7].amount+'</b></p>'
+
+			}else if(ress.length==9){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[5].nickname+'</b><b class="jie_r">'+ress[5].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[6].nickname+'</b><b class="jie_r">'+ress[6].amount+'</b></p>'
+						   +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[7].nickname+'</b><b class="jie_r">'+ress[7].amount+'</b></p>'	
+						    +'<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[8].nickname+'</b><b class="jie_r">'+ress[8].amount+'</b></p>'
+			}else if(ress.length==10){
+				jigeawnjia='<p class="wosip"><b class="jie_sz">'+'1'+'</b><b class="jie_l">'+ress[0].nickname+'</b><b class="jie_r">'+ress[0].amount+'</b></p>'+
+						  +'<p class="wosip"><b class="jie_sz">'+'2'+'</b><b class="jie_l">'+ress[1].nickname+'</b><b class="jie_r">'+ress[1].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'3'+'</b><b class="jie_l">'+ress[2].nickname+'</b><b class="jie_r">'+ress[2].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'4'+'</b><b class="jie_l">'+ress[3].nickname+'</b><b class="jie_r">'+ress[3].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'5'+'</b><b class="jie_l">'+ress[4].nickname+'</b><b class="jie_r">'+ress[4].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'6'+'</b><b class="jie_l">'+ress[5].nickname+'</b><b class="jie_r">'+ress[5].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'7'+'</b><b class="jie_l">'+ress[6].nickname+'</b><b class="jie_r">'+ress[6].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'8'+'</b><b class="jie_l">'+ress[7].nickname+'</b><b class="jie_r">'+ress[7].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'9'+'</b><b class="jie_l">'+ress[8].nickname+'</b><b class="jie_r">'+ress[8].amount+'</b></p>'
+						  +'<p class="wosip"><b class="jie_sz">'+'10'+'</b><b class="jie_l">'+ress[9].nickname+'</b><b class="jie_r">'+ress[9].amount+'</b></p>'
+			}	
+			 	}
+			 	}	
+			 		$(".jie_xian").html(jigeawnjia)
+			 	}
+			 	if(bjsca==1){
+			 		if(data.code=='pksdraw'){
+//					mui.toast('牛牛开奖成功，中奖区域为'+data.return_number.sgdrawnumber+'号')
+					
+//				var jieguo=localStorage.getItem("lastaward")	
+				var jieguo=data.return_number.awardnumbers;
+			jieguo = jieguo.split(",");
+			var kai1 = jieguo[0];
+			var kai2 = jieguo[1];
+			var kai3 = jieguo[2];
+			var kai4 = jieguo[3];
+			var kai5 = jieguo[4];
+			var kai6 = jieguo[5];
+			var kai7 = jieguo[6];
+			var kai8 = jieguo[7];
+			var kai9 = jieguo[8];
+			var kai10 = jieguo[9];
+			var bei = bei;
+			$("#wo1").css({
+				'background':'url(src/img/majiang/'+kai1+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo2").css({
+				'background':'url(src/img/majiang/'+kai2+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo3").css({
+				'background':'url(src/img/majiang/'+kai3+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo4").css({
+				'background':'url(src/img/majiang/'+kai4+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo5").css({
+				'background':'url(src/img/majiang/'+kai5+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo6").css({
+				'background':'url(src/img/majiang/'+kai6+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo7").css({
+				'background':'url(src/img/majiang/'+kai7+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo8").css({
+				'background':'url(src/img/majiang/'+kai8+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo9").css({
+				'background':'url(src/img/majiang/'+kai9+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo10").css({
+				'background':'url(src/img/majiang/'+kai10+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo1").addClass("donghua1")
+			$("#wo2").addClass("donghua2")
+			$("#wo3").addClass("donghua3")
+			$("#wo4").addClass("donghua4")
+			$("#wo5").addClass("donghua5")
+			$("#wo6").addClass("donghua6")
+			$("#wo7").addClass("donghua7")
+			$("#wo8").addClass("donghua8")
+			$("#wo9").addClass("donghua9")
+			$("#wo10").addClass("donghua10")
+		
+			 
+				
+			//清除样式
+				setTimeout(function(){
+					localStorage.maxbalance=1000000;
+							localStorage.xianjia = 0;
+							localStorage.pjzhuangtype=1;
+							localStorage.shengzhuang=0;
+							localStorage.jinjian=1;
+							localStorage.fangzhuid=0;
+							bentouzhu1=0;
+							bentouzhu2=0
+
+							benrenquan1 = 0;
+							benrenquan2 = 0;
+
+						$(".szliebiao").show()
+				var shishis=0;
+				var waishishis=0;
+				$(".bukexuanzezhuang").hide()
+				$(".bukexuanze").hide();
+				$(".woyeshidaoji").show();
+				$(".buwoyeshidaoji").hide();
+				//清除不可投注
+				$("li").remove(".dier");
+					//清除投注
+	
+	
+				$(".benzongjine1").text('');
+				$(".benzongjine2").text('');
+
+				//庄家	
+				$(".bukesc_pj_1").hide()
+				$(".bukesc_pj_2").hide()
+	
+				$(".zhuanqian").html('')
+				$(".szhuang").show();
+				//清除开奖列表
+				$(".benjujiesuan").show();
+			 		setTimeout(function(){
+					$(".li1 .dier").animate({
+					bottom:1.5+'rem',
+					left:6.4+'rem',
+					});	
+				$(".li2 .dier").animate({
+					bottom:1.5+'rem',
+					left:5.1+'rem',
+				});	
+				$(".li3 .dier").animate({
+					bottom:1.5+'rem',
+					left:3.8+'rem',
+				});	
+				$(".li4 .dier").animate({
+					bottom:1.5+'rem',
+					left:2.5+'rem',
+				});	
+				$(".li5 .dier").animate({
+					bottom:1.5+'rem',
+					left:1.2+'rem',
+				});	
+				$(".userchoumali .dier").animate({
+						bottom:-0.4+'rem',
+						left:0.5+'rem',
+				});	
+					$(".dier").hide(100)
+				},3000)
+				
+			 	setTimeout(function(){
+					$("li").remove(".dier");
+			 		$(".jiesuan_con").html('')
+			 		$(".jie_xian").html('')
+					$(".benjujiesuan").hide();
+						$(".jiesuan_shouru").html('');
+				},5000)
+				$(".shaizi").removeClass('shaizi1')
+							$(".shaizi").removeClass('shaizi2')
+							
+				$(".dianshu span").text('');
+				$(".dianshu").hide();
+				$(".zongjine11").text('');
+				$(".zongjine22").text('');
+				zong1=0;zong2=0;zong3=0;zong4=0;zong5=0;
+				$(".shangzhuang").text('我要上庄')
+				//清除房间的下注
+				
+				localStorage.removeItem("touzhu0")
+				localStorage.removeItem("touzhu1")
+
+				localStorage.removeItem("jingcai0")
+				localStorage.removeItem("jingcai1")
+
+				$("#wo1").removeClass("donghua1")
+				$("#wo2").removeClass("donghua2")
+				$("#wo3").removeClass("donghua3")
+				$("#wo4").removeClass("donghua4")
+				$("#wo5").removeClass("donghua5")
+				$("#wo6").removeClass("donghua6")
+				$("#wo7").removeClass("donghua7")
+				$("#wo8").removeClass("donghua8")
+				$("#wo9").removeClass("donghua9")
+				$("#wo10").removeClass("donghua10")
+			$(".mingci11").removeClass("mingci"+newarr1[1] +"");
+			$(".mingci22").removeClass("mingci"+newarr1[2] +"");
+			$(".mingci33").removeClass("mingci"+newarr1[3] +"");
+			$(".mingci44").removeClass("mingci"+newarr1[4] +"");
+			$(".mingci55").removeClass("mingci"+newarr1[5] +"");
+				$("#wo1").hide();$("#wo2").hide();$("#wo3").hide();$("#wo4").hide();$("#wo5").hide();$("#wo6").hide();$("#wo7").hide();$("#wo8").hide();$("#wo9").hide();$("#wo10").hide();$("#wo11").hide();$("#wo12").hide();$("#wo13").hide();$("#wo14").hide();$("#wo15").hide();
+				},15000)	
+				}
+			 }else if(bjsca==2){
+			 	if(data.code=='klftdraw'){
+//					mui.toast('牛牛开奖成功，中奖区域为'+data.return_number.sgdrawnumber+'号')
+					
+				var jieguo=data.return_number.awardnumbers;
+			jieguo = jieguo.split(",");
+			var kai1 = jieguo[0];
+			var kai2 = jieguo[1];
+			var kai3 = jieguo[2];
+			var kai4 = jieguo[3];
+			var kai5 = jieguo[4];
+			var kai6 = jieguo[5];
+			var kai7 = jieguo[6];
+			var kai8 = jieguo[7];
+			var kai9 = jieguo[8];
+			var kai10 = jieguo[9];
+			var bei = bei;
+			$("#wo1").css({
+				'background':'url(src/img/majiang/'+kai1+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo2").css({
+				'background':'url(src/img/majiang/'+kai2+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo3").css({
+				'background':'url(src/img/majiang/'+kai3+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo4").css({
+				'background':'url(src/img/majiang/'+kai4+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo5").css({
+				'background':'url(src/img/majiang/'+kai5+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo6").css({
+				'background':'url(src/img/majiang/'+kai6+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo7").css({
+				'background':'url(src/img/majiang/'+kai7+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo8").css({
+				'background':'url(src/img/majiang/'+kai8+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo9").css({
+				'background':'url(src/img/majiang/'+kai9+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo10").css({
+				'background':'url(src/img/majiang/'+kai10+'.png)'+'no-repeat',
+				'background-size':'100% 100%'
+				})
+			$("#wo1").addClass("donghua1")
+			$("#wo2").addClass("donghua2")
+			$("#wo3").addClass("donghua3")
+			$("#wo4").addClass("donghua4")
+			$("#wo5").addClass("donghua5")
+			$("#wo6").addClass("donghua6")
+			$("#wo7").addClass("donghua7")
+			$("#wo8").addClass("donghua8")
+			$("#wo9").addClass("donghua9")
+			$("#wo10").addClass("donghua10")
+		
+			//清除样式
+				setTimeout(function(){
+					$(".bukexuanze").hide();
+				$(".woyeshidaoji").show();
+				$(".buwoyeshidaoji").hide();
+				//清除不可投注	
+				$("li").remove(".dier");
+					//清除投注
+				$(".zongjine1").text('');
+				$(".zongjine2").text('');
+				$(".zongjine3").text('');
+				$(".zongjine4").text('');
+				$(".zongjine5").text('');
+				$(".shangzhuang").text('我要上庄')
+				$("#wo1").removeClass("donghua1")
+				$("#wo2").removeClass("donghua2")
+				$("#wo3").removeClass("donghua3")
+				$("#wo4").removeClass("donghua4")
+				$("#wo5").removeClass("donghua5")
+				$("#wo6").removeClass("donghua6")
+				$("#wo7").removeClass("donghua7")
+				$("#wo8").removeClass("donghua8")
+				$("#wo9").removeClass("donghua9")
+				$("#wo10").removeClass("donghua10")
+			
+				},15000) 	
+					
+				}
+			 	//klftdraw	
+			 }
+				
+
+		}//if结束	 
+			break;
+	}
+};
+		
+				
+				
+				var nextno=localStorage.getItem("nextno")
+				$(function(){
+					var nickname=localStorage.getItem("nickname")
+					$("#yhid").text(nickname)
+					var balance=localStorage.getItem("balance")
+					$("#yhwing").text(balance)	
+				})				
+						
+				
+			window.onload=function(){
+				
+				var bjsca=localStorage.getItem("bjsca");
+				var token = localStorage.getItem("token")
+			localStorage.pjzhuangtype=2;
+			//更新余额
+			$.ajax({
+						url: jc + "/Home/Api/checkbalance",
+						type: 'post',
+						data: {
+							safecode: 'BaYue.JingCai',
+							apiversion: 'v.1.0',
+							token: token,
+						},
+						success: function(result) {
+							console.log(JSON.stringify(result));
+							if(result.code==200){
+								$("#yhwing").text(result.data.balance)
+								localStorage.balance=result.data.balance;
+							}
+						},
+					})
+			//2S关闭不可选择
+			setTimeout(function(){
+				$(".bukemiao").hide()
+			},2000)
+			if(bjsca==1){
+				$("#if2").append('<iframe src="http://jc.bayuenet.com/Home/Index/index.html" style="width:375px;height:210px;" scrolling="no" id="if3" ></iframe> ')
+				
+				$(".fangjianqi").append('<p>北京赛车-<span class="bjqh"></span>期-牛牛</p>')
+				
+			httpdizhi="http://jc.bayuenet.com/Home/Api/gamelog";
+			wanfa='bjpks';
+			fanhuithml='bjfairs.html';
+				console.log(httpdizhi)
+			}else if(bjsca==2){
+				$("#if2").append('<iframe src="http://jc.bayuenet.com/Home/Index/klft.html" style="width:375px;height:210px;" scrolling="no" id="if3" ></iframe> ')
+				$(".fangjianqi").append('<p>幸运飞艇-<span class="ft"></span>期-牛牛</p>')
+			httpdizhi="http://jc.bayuenet.com/Home/Api/klftlog";
+			wanfa='xyft';
+			fanhuithml='lucky2.html';
+			}else{
+				mui.toast('发生错误,请重新登录!')
+			}
+ 	 
+			
+//			touzhu1=Math.floor(touzhu0/1000)//几个1000
+//			touzhu2=Math.floor(touzhu0%1000/500)//几个500
+//			touzhu3=Math.floor(touzhu0%1000%500/100)//几个100
+//			touzhu4=Math.floor(touzhu0%1000%500%100/50)//几个50
+//			touzhu5=Math.floor(touzhu0%1000%500%50%100/10)//几个10
+
+		var betsc=localStorage.getItem("betsc")		
+		var touzhu0= Number(localStorage.getItem("touzhu0"))
+		var touzhu1= Number(localStorage.getItem("touzhu1"))
+		var bentouzhu0= Number(localStorage.getItem("bentouzhu0"))
+		var bentouzhu1= Number(localStorage.getItem("bentouzhu1"))
+		if(touzhu0==0){touzhu0='';}
+		if(touzhu1==0){touzhu1='';}
+		if(bentouzhu0==0){bentouzhu0='';}
+		if(bentouzhu1==0){bentouzhu1='';}
+
+		
+		var shengzhuang=Number(touzhu0)+Number(touzhu1)
+		localStorage.shengzhuang=shengzhuang;
+
+
+
+		$(".zongjine11").text(touzhu0)
+		$(".zongjine22").text(touzhu1)
+
+		$(".benzongjine1").text(bentouzhu0)
+		$(".benzongjine2").text(bentouzhu1)
+			if (touzhu0 != 0) {
+				$(".szhuang").hide()
+			betstou1=Math.floor(touzhu0/5)//几个1000
+			betstou2=Math.floor(touzhu0%5/4)//几个500
+			betstou3=Math.floor(touzhu0%5%4/3)//几个100
+			betstou4=Math.floor(touzhu0%5%4%3/2)//几个50
+			betstou5=Math.floor(touzhu0%5%4%3%2/1)//几个10
+			
+			var jige1=betstou1
+			var jige2=betstou2
+			var jige3=betstou3
+			var jige4=betstou4
+			var jige5=betstou5
+			var betstou1='5'
+			var betstou2='4'
+			var betstou3='3'
+			var betstou4='2'
+			var betstou5='1'
+			for(var i = 0 ; i < jige1 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi1'>"+
+						"<img src='src/img/0403/"+betstou1+"@2x.png'/>"+"</li>")
+					var t=(400+(parseInt(100*Math.random())))/100;
+					var s=(-500+(parseInt(500*Math.random())))/100;	
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        		}
+		 for(var i = 0 ; i < jige2 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi1'>"+
+						"<img src='src/img/0403/"+betstou2+"@2x.png'/>"+"</li>")
+					var t=(400+(parseInt(100*Math.random())))/100;
+					var s=(-500+(parseInt(100*Math.random())))/100;	
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige3 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi1'>"+
+						"<img src='src/img/0403/"+betstou3+"@2x.png'/>"+"</li>")
+					var t=(400+(parseInt(100*Math.random())))/100;
+					var s=(-500+(parseInt(100*Math.random())))/100;	
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige4 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi1'>"+
+						"<img src='src/img/0403/"+betstou4+"@2x.png'/>"+"</li>")
+					var t=(400+(parseInt(100*Math.random())))/100;
+					var s=(-500+(parseInt(100*Math.random())))/100;	
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige5 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi1'>"+
+						"<img src='src/img/0403/"+betstou5+"@2x.png'/>"+"</li>")
+					var t=(400+(parseInt(100*Math.random())))/100;
+					var s=(-500+(parseInt(100*Math.random())))/100;	
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}	
+		}
+		if (touzhu1 != 0) {
+			$(".szhuang").hide()
+			betstou1=Math.floor(touzhu1/5)//几个1000
+			betstou2=Math.floor(touzhu1%5/4)//几个500
+			betstou3=Math.floor(touzhu1%5%4/3)//几个100
+			betstou4=Math.floor(touzhu1%5%4%3/2)//几个50
+			betstou5=Math.floor(touzhu1%5%4%3%2/1)//几个10
+			var jige1=betstou1
+			var jige2=betstou2
+			var jige3=betstou3
+			var jige4=betstou4
+			var jige5=betstou5
+			var betstou1='5'
+			var betstou2='4'
+			var betstou3='3'
+			var betstou4='2'
+			var betstou5='1'
+				for(var i = 0 ; i < jige1 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi2'>"+
+						"<img src='src/img/0403/"+betstou1+"@2x.png'/>"+"</li>")
+					var t=(120+(parseInt(100*Math.random())))/100;
+						var s=(-500+(parseInt(100*Math.random())))/100;
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        		}
+		 for(var i = 0 ; i < jige2 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi2'>"+
+						"<img src='src/img/0403/"+betstou2+"@2x.png'/>"+"</li>")
+					var t=(120+(parseInt(100*Math.random())))/100;
+						var s=(-500+(parseInt(100*Math.random())))/100;
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige3 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi2'>"+
+						"<img src='src/img/0403/"+betstou3+"@2x.png'/>"+"</li>")
+					var t=(120+(parseInt(100*Math.random())))/100;
+						var s=(-500+(parseInt(100*Math.random())))/100;
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige4 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi2'>"+
+						"<img src='src/img/0403/"+betstou4+"@2x.png'/>"+"</li>")
+					var t=(120+(parseInt(100*Math.random())))/100;
+						var s=(-500+(parseInt(100*Math.random())))/100;
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		for(var i = 0 ; i < jige5 ; i++) {
+         $(".userchoumali").append("<li class='li11"+scone+" dier woshi2'>"+
+						"<img src='src/img/0403/"+betstou5+"@2x.png'/>"+"</li>")
+					var t=(120+(parseInt(100*Math.random())))/100;
+						var s=(-500+(parseInt(100*Math.random())))/100;
+					$(".li11"+scone+"").animate({
+						bottom:t+'rem',
+						left:s+'rem',
+					});	
+					scone++;
+        	}
+		}
+			
+  	}
+		
+		function home(){
+ 		localStorage.removeItem("cococo")
+ 		 localStorage.removeItem("nextno1")
+ 		 localStorage.removeItem("qihaoo")
+ 		 localStorage.removeItem("qihaoo1")
+ 		 localStorage.removeItem("test1")
+ 		 localStorage.removeItem("betsc")
+ 		 localStorage.removeItem("jingcai0")
+ 		 localStorage.removeItem("jingcai1")
+ 		 localStorage.removeItem("jingcai2")
+ 		 localStorage.removeItem("jingcai3")
+ 		 localStorage.removeItem("jingcai4")
+ 		 localStorage.removeItem("touzhu0")
+ 		 localStorage.removeItem("touzhu1")
+ 		 localStorage.removeItem("touzhu2")
+ 		 localStorage.removeItem("touzhu3")
+ 		 localStorage.removeItem("touzhu4")
+ 		 localStorage.removeItem("bentouzhu0")
+ 		 localStorage.removeItem("bentouzhu1")
+ 		 localStorage.removeItem("bentouzhu2")
+ 		 localStorage.removeItem("bentouzhu3")
+ 		 localStorage.removeItem("bentouzhu4")
+ 		window.location.href=fanhuithml;
+ 		var roomid = localStorage.getItem("roomid")
+ 		var client_id = localStorage.getItem("client_id")
+ 		$.ajax({
+					url:'http://jc.bayuenet.com/Home/Order/bind',
+					type: 'post',
+					data:{
+					safecode:'BaYue.JingCai',
+					apiversion:'v.1.0',
+					roomid:roomid,
+					client_id:client_id,
+				},
+					success: function(result) {
+						console.log(JSON.stringify(result));
+						
+					}
+				})
+ 	}
+
+				
+
+				
+			var nextno1=localStorage.getItem("nextno1")
+			var bjsca=localStorage.getItem("bjsca");
+				var t_id=localStorage.getItem("t_id");
+				function bjscaa(){
+				if(bjsca==1){
+					game=1;
+					var qihao2=localStorage.getItem("qihao2")
+					localStorage.zuixinqihao=qihao2;
+					$(".bjqh").text(qihao2);
+				}else if(bjsca==2){
+					game=2;
+					var qihao2=localStorage.getItem("qihaoft")
+					localStorage.zuixinqihao=qihao2;
+					$(".ft").text(qihao2);
+					
+				}
+				var zuixinqihao=localStorage.getItem("zuixinqihao")
+				console.log(zuixinqihao+'我是看看才能')
+			}	
+
+				setInterval("bjscaa()","3000")
+				bjscaa.apply(null);
+			
+
+$(".bukesc_niu_1").click(function(){
+		localStorage.zhuangxuan=1;
+	})
+	$(".bukesc_niu_2").click(function(){
+		localStorage.zhuangxuan=2;
+	})
+
+//	function bukesc_pj(){
+	$(".bukesc_niu").click(function(){
+		var token = localStorage.getItem("token")
+	var zuixinqihao = localStorage.getItem("zuixinqihao")
+	var zhuangjin = localStorage.getItem("zhuangjin")
+	var zhuangxuan = localStorage.getItem("zhuangxuan")
+	if(zhuangjin >= 200) {
+		$.ajax({
+			url: jc + "/Home/Api/bets",
+			type: 'post',
+			data: {
+				safecode: 'BaYue.JingCai',
+				apiversion: 'v.1.0',
+				token: token,
+				game: game,
+				t_id: t_id,
+				type: 8, //7 牌九 8牛牛 9三公
+				del_points: zhuangjin, //竞猜下注点数
+				number: zuixinqihao,
+				roomid: roomid, //房间ID
+				jincai: zhuangxuan, //内容12345
+				isroomowner: 1,
+			},
+			success: function(result) {
+				console.log(JSON.stringify(result));
+				if(result.data.balance > del_points) {
+					var yueee = result.data.balance;
+					localStorage.balance = yueee;
+					$("#yhwing").text(yueee)
+					localStorage.userid = result.data.userid;
+
+				}
+			},
+		})
+	} else {
+		mui.toast("最低10000元宝")
+	}
+	})	
+
+var touzhu0 = localStorage.getItem("touzhu0")
+var touzhu1 = localStorage.getItem("touzhu1")
+var touzhu0 = Number(touzhu0)
+var touzhu1 = Number(touzhu1)
+var zong1 = touzhu0;
+var zong2 = touzhu1;
+
+			$(".sc_niu_1").click(function() {
+						
+		if($(".li1 .lixz").hasClass('liquan')) {del_points=1;}				
+		if($(".li2 .lixz").hasClass('liquan')) {del_points=2;}							
+		if($(".li3 .lixz").hasClass('liquan')) {del_points=3;}
+		if($(".li4 .lixz").hasClass('liquan')) {del_points=4;}
+		if($(".li5 .lixz").hasClass('liquan')) {del_points=5;}
+					
+				var token = localStorage.getItem("token")
+					var nextno1=localStorage.getItem("nextno1")
+					var zuixinqihao=localStorage.getItem("zuixinqihao")
+					var maxbalance =Number(localStorage.getItem("maxbalance"))
+	var xianjia = Number(localStorage.getItem("xianjia"))
+	var pjzhuangtype = localStorage.getItem("pjzhuangtype")
+		if(maxbalance - xianjia - del_points >= 0) {
+						
+					$.ajax({
+					url:jc+"/Home/Api/bets",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+						game:game,
+						t_id:t_id,
+						type:pjzhuangtype,//1 牌九 2牛牛 3三公
+						del_points:del_points,//竞猜下注点数
+						number:zuixinqihao,//  
+						roomid:roomid,//房间ID
+						jincai:1,//内容12345
+						isroomowner: 0,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							if(result.data.balance>del_points){
+							mui.toast('下注成功!')
+							var yueee=result.data.balance;
+						$("#yhwing").text(yueee)
+						localStorage.userid=result.data.userid;
+						
+						
+					if($(".li1 .lixz").hasClass('liquan')) {
+					$(".li1").append("<li class='li11" + scone + " dier'>" +
+						"<img src='src/img/0403/1.png'/>" + "</li>")
+					var t = (610 + (parseInt(100 * Math.random()))) / 100;
+					var s = (40 + (parseInt(550 * Math.random()))) / 100;
+					$(".li11" + scone + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scone++;
+					zong11 += 1;
+					
+
+				}
+
+				if($(".li2 .lixz").hasClass('liquan')) {
+					$(".li2").append("<li class='li22" + sctwo + " dier'>" +
+						"<img src='src/img/0403/2.png'/>" + "</li>")
+					var t = (610 + (parseInt(100 * Math.random()))) / 100;
+					var s = (-125 + (parseInt(550 * Math.random()))) / 100;
+					$(".li22" + sctwo + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					sctwo++;
+					zong11 += 2;
+					
+				}
+
+				if($(".li3 .lixz").hasClass('liquan')) {
+					$(".li3").append("<li class='li33" + scthree + " dier'>" +
+						"<img src='src/img/0403/3.png'/>" + "</li>")
+					var t = (610 + (parseInt(100 * Math.random()))) / 100;
+					var s = (-250 + (parseInt(550 * Math.random()))) / 100;
+					$(".li33" + scthree + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scthree++;
+					zong11 += 3;
+					
+				}
+
+				if($(".li4 .lixz").hasClass('liquan')) {
+					$(".li4").append("<li class='li44" + scfour + " dier'>" +
+						"<img src='src/img/0403/4.png'/>" + "</li>")
+					var t = (610 + (parseInt(100 * Math.random()))) / 100;
+					var s = (-375 + (parseInt(550 * Math.random()))) / 100;
+					$(".li44" + scfour + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scfour++;
+					zong11 += 4;
+					del_points=4;
+					
+				}
+
+				if($(".li5 .lixz").hasClass('liquan')) {
+					$(".li5").append("<li class='li55" + scfive + " dier'>" +
+						"<img src='src/img/0403/5.png'/>" + "</li>")
+					var t = (610 + (parseInt(100 * Math.random()))) / 100;
+					var s = (-500 + (parseInt(550 * Math.random()))) / 100;
+					$(".li55" + scfive + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scfive++;
+					zong11 += 5;
+					del_points=5;
+					
+				}
+		
+			}
+					
+				//余额够投注
+			} else if(data.code == -500) {
+				mui.toast('余额不足，请先充值!')
+			} else {
+				mui.toast('下注失败!')
+			}
+		},
+		error: function() {
+			mui.toast('网络错误!')
+		}
+	})
+	//超过庄家
+						} else {
+							$(".bukexuanze").show();
+							mui.toast('已达到庄家投注上限!')
+						}
+})
+
+			$(".sc_niu_2").click(function() {
+				
+		if($(".li1 .lixz").hasClass('liquan')) {del_points=1;}				
+		if($(".li2 .lixz").hasClass('liquan')) {del_points=2;}							
+		if($(".li3 .lixz").hasClass('liquan')) {del_points=3;}
+		if($(".li4 .lixz").hasClass('liquan')) {del_points=4;}
+		if($(".li5 .lixz").hasClass('liquan')) {del_points=5;}
+
+				var token = localStorage.getItem("token")
+				var nextno1=localStorage.getItem("nextno1")
+				var zuixinqihao=localStorage.getItem("zuixinqihao")
+				
+				var maxbalance = localStorage.getItem("maxbalance")
+var xianjia = localStorage.getItem("xianjia")
+var pjzhuangtype = localStorage.getItem("pjzhuangtype")
+	$(function() {	
+
+		if(maxbalance - xianjia - del_points >= 0) {
+					$.ajax({
+					url:jc+"/Home/Api/bets",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						token:token,
+						game:game,
+						t_id:t_id,
+						type:pjzhuangtype,//1 牌九 2牛牛 3三公
+						del_points:del_points,//竞猜下注点数
+						number:zuixinqihao,//  
+						roomid:roomid,//房间ID
+						jincai:2,//内容12345
+						isroomowner: 0,
+					},
+					success:function(result){
+						console.log(JSON.stringify(result));
+						if(result.code == 200){
+							if(result.data.balance>del_points){
+							mui.toast('下注成功!')
+							var yueee=result.data.balance;
+						$("#yhwing").text(yueee)
+						localStorage.userid=result.data.userid;	
+				
+				if($(".li1 .lixz").hasClass('liquan')) {
+					$(".li1").append("<li class='li11" + scone + " dier'>" +
+						"<img src='src/img/0403/1.png'/>" + "</li>")
+					var t = (310 + (parseInt(120 * Math.random()))) / 100;
+					var s = (40 + (parseInt(550 * Math.random()))) / 100;
+					$(".li11" + scone + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scone++;
+					zong22 += 1;
+					
+				}
+
+				if($(".li2 .lixz").hasClass('liquan')) {
+					$(".li2").append("<li class='li22" + sctwo + " dier'>" +
+						"<img src='src/img/0403/2.png'/>" + "</li>")
+					var t = (310 + (parseInt(120 * Math.random()))) / 100;
+					var s = (-125 + (parseInt(550 * Math.random()))) / 100;
+					$(".li22" + sctwo + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					sctwo++;
+					zong22 += 2;
+					
+				}
+
+				if($(".li3 .lixz").hasClass('liquan')) {
+					$(".li3").append("<li class='li33" + scthree + " dier'>" +
+						"<img src='src/img/0403/3.png'/>" + "</li>")
+					var t = (310 + (parseInt(120 * Math.random()))) / 100;
+					var s = (-250 + (parseInt(550 * Math.random()))) / 100;
+					$(".li33" + scthree + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scthree++;
+					zong22 += 3;
+					
+				}
+
+				if($(".li4 .lixz").hasClass('liquan')) {
+					$(".li4").append("<li class='li44" + scfour + " dier'>" +
+						"<img src='src/img/0403/4.png'/>" + "</li>")
+					var t = (310 + (parseInt(120 * Math.random()))) / 100;
+					var s = (-375 + (parseInt(550 * Math.random()))) / 100;
+					$(".li44" + scfour + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scfour++;
+					zong22 += 4;
+					
+				}
+
+				if($(".li5 .lixz").hasClass('liquan')) {
+					$(".li5").append("<li class='li55" + scfive + " dier'>" +
+						"<img src='src/img/0403/5.png'/>" + "</li>")
+					var t = (310 + (parseInt(120 * Math.random()))) / 100;
+					var s = (-500 + (parseInt(550 * Math.random()))) / 100;
+					$(".li55" + scfive + "").animate({
+						bottom: t + 'rem',
+						left: s + 'rem',
+					});
+					scfive++;
+					zong22 += 5;
+				}
+				//判断钱够不够
+					} else {
+						mui.toast('余额不足，请先充值!')
+					}
+				} else if(data.code == -500) {
+					mui.toast('余额不足，请先充值!')
+				} else {
+					mui.toast('下注失败!')
+				}
+			},
+			error: function() {
+				mui.toast('网络错误!')
+			}
+		})
+		//超过庄家
+							} else {
+							$(".bukexuanze").show();
+							mui.toast('已达到庄家投注上限!')
+							}				
+	})
+				
+})
+			$("#guize").click(function() {
+				var token = localStorage.getItem("token")
+				$.ajax({
+//					url: "http://jc.bayuenet.com/Home/Api/gamelog",
+					url: httpdizhi,
+					type: 'post',
+					data:{
+					safecode:'BaYue.JingCai',
+					apiversion:'v.1.0',
+					token:token,
+					min:0,
+					max:100,
+					type:wanfa,
+				},
+					success: function(result) {
+						console.log(JSON.stringify(result));
+						if(result.code == 200) {
+							var res=result.data;
+							var str='';
+							var wod='';
+							
+						Array.prototype.removeRepeatAttr=function(){
+					    var tmp={},a=this.slice(); 
+					    for(var i=j=0;i<a.length;i++){
+					        if(!tmp[a[i].periodnumber]){
+					            tmp[a[i].periodnumber]=!0;
+					            j++;
+					        }else{
+					            this.splice(j,1);
+					        }
+					    };
+					}
+					var arr = res;
+					arr.removeRepeatAttr();	
+					
+						for(i=0;i<arr.length;i++){
+							
+							var s=arr[i].awardnumbers;
+							ss = s.split(",");
+							var yy=arr[i].awardnumbers;
+							yyy = yy.split(",");
+							
+							str+='<div class="gfshuju">'+
+							'<p><span class="qihao">'+
+							arr[i].periodnumber+
+							'</span>'+'期'+'</p>'+
+							'<p><span class="sc_time">'+
+							arr[i].awardtime+'</span></p>'+
+							'<div class="clera"></div>'+
+							'<ul class="gf_ul">'+
+									"<li class='gf_li gf_"+ss[0]+" '>"+ss[0]+"</li>"+
+									"<li class='gf_li gf_"+ss[1]+" '>"+ss[1]+"</li>"+
+									"<li class='gf_li gf_"+ss[2]+" '>"+ss[2]+"</li>"+
+									"<li class='gf_li gf_"+ss[3]+" '>"+ss[3]+"</li>"+
+									"<li class='gf_li gf_"+ss[4]+" '>"+ss[4]+"</li>"+
+									"<li class='gf_li gf_"+ss[5]+" '>"+ss[5]+"</li>"+
+									"<li class='gf_li gf_"+ss[6]+" '>"+ss[6]+"</li>"+
+									"<li class='gf_li gf_"+ss[7]+" '>"+ss[7]+"</li>"+
+									"<li class='gf_li gf_"+ss[8]+" '>"+ss[8]+"</li>"+
+									"<li class='gf_li gf_"+ss[9]+" '>"+ss[9]+"</li>"+
+									'</ul>'+
+							'</div>'
+							
+							var sc_mc='sc_mc'
+							if(arr[i].nndrawnumber==1){
+								qian=1;
+								hou=2;
+							}else if(arr[i].nndrawnumber==2){
+								qian=2;
+								hou=1;
+							}
+							if(arr[i].nnqian==11){
+								arr[i].nnqian='牛牛'
+							}
+							if(arr[i].nnhou==11){
+								arr[i].nnhou='牛牛';
+							}
+							
+							wod+='<div class="shuju">'+
+							'<p><span class="qihao">'+
+							arr[i].periodnumber+
+							'</span>'+'期'+'</p>'+
+							'<p><span class="sc_time">'+
+							arr[i].awardtime+'</span></p>'+
+							'<div class="clera"></div>'+
+							'<ul class="shuju_ul">'+
+									'<li style="width: 50%;"><span class="sc_dianshu">'+arr[i].nnqian+"</span><br /><span class='sc_mingci "+ sc_mc+qian +"'></span></li>"+
+									'<li style="width: 50%;"><span class="sc_dianshu">'+arr[i].nnhou+"</span><br /><span class='sc_mingci "+ sc_mc+hou +"'></span></li>"+
+									'</ul>'+
+							'</div>'
+												
+						}
+
+						
+					$(".gfshuju").html(str)
+					$(".shuju").html(wod)
+						} else {
+							mui.toast('网络异常!')
+						}
+
+					}
+				})
+			})
+			
+			
+				function szhuang(){
+				var balance=localStorage.getItem("balance")
+				
+				if(balance>=200){
+					$(".t_zj").show()
+					$(".bjj").show()
+				}else if(balance<200){
+					mui.toast('余额不足200，请先充值')
+				}
+			}
+			
+			$("#zj_for2").click(function(){
+				var token=localStorage.getItem("token")
+				var zuixinqihao=localStorage.getItem("zuixinqihao")
+				var nickname=localStorage.getItem("nickname")
+				var roomid = localStorage.getItem("roomid")
+				$(".t_zj").hide();
+				$(".bjj").hide()
+			$.ajax({
+				
+					url:jc+"/Home/Api/roomowner",
+					type:'post',
+					data:{
+						safecode:'BaYue.JingCai',
+						apiversion:'v.1.0',
+						room_id:roomid,
+						token:token,
+						periodnumber:zuixinqihao,
+					},
+					
+					success:function(result){
+						
+						console.log(JSON.stringify(result));
+						if($("#zhuangjin").val()>199){
+							if(result.code == 200){
+							$(".t_zj").hide()
+							localStorage.zhuangjin=$("#zhuangjin").val();
+//							$(".shangzhuang").text(nickname)
+							}else if(result.code == -600){
+								mui.toast('已经有房主了，等下期在申请吧！')
+								$(".t_zj").hide();
+							}
+						}
+				    },  
+				  	error:function(){
+				  		mui.toast('网络错误!')
+				  	}	 
+		})	
+				
+			})
+		</script>
+	</body>
+
+</html>

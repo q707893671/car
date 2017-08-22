@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jc</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <script src="src/js/jquery-2.js"></script>
+    <script src="src/js/publicjs.js"></script>
+
+    <link rel="stylesheet" href="src/css/publiccss.css">
+    <link rel="stylesheet" href="src/css/hometop.css">
+    <link rel="stylesheet" href="src/css/navright.css">
+
+
+	</head>
+	<body>
+		<!--<div class="Navright">-->
+	 <!--<nav id="menu1" class="menu1" style="background: #424458;">-->
+	 	<div id="divmusic"></div>
+		<audio id="audio" src="src/mp3/duang.mp3" style="display:none"></audio>
+     	<div class="container3">
+	     	<div class="right_top">
+	     		<div class="right_top_new">
+	     			<span></span>&nbsp;&nbsp;&nbsp;账号
+	     		</div>
+	     	</div>
+	     	<div class="right_top_id">
+	     			<p>账号 :<span class="right_top_account">EFEE540-EC88-458C-9F29-34B81C620DA</span></p>
+	     			<p>昵称 :<span class="right_top_name">用户0000</span></p>
+	     			<p>金额 :<span class="right_top_money">2760元宝</span></p>
+	     		</div>
+			<div class="clear"></div>
+			<div class="right_bangding">
+				<p class="right_zhifubao">绑定支付宝<span></span></p>
+				<p class="right_weixin">绑定微信号<span></span></p>
+				
+					<a href="tianjiayhk.html">
+				<p class="right_yinhangka">绑定银行卡<span></span></p>
+				</a>
+				<p class="right_touzhu">投注明细 (每日更新)<span></span></p>
+			</div>
+				<div class="right_huiyuan">会员到期时间: <span class="right_time">2018.09.21</span></div>
+			
+			<div class="right_bangding right_dibu">
+				<p class="right_kefu">联系客服<span></span></p>
+				<p class="right_tuichu">退出登录<span></span></p>
+			</div>
+      </div>
+      <div class="right_yinkui">
+		当日盈亏：<span class="right_yuanbao">6</span> 元宝
+		</div>
+		
+		<div class="t_zhifubao">
+			<div class="t_top">
+				<p class="t_top_b">绑定支付宝</p>
+				<p class="t_top_x">&times;</p>
+			</div>
+			<div class="t_con">
+				<input type="" name="" id="t_input1" value="" placeholder="请输入支付宝账户"/>
+				<input type="" name="" id="t_input2" value="" placeholder="请输入支付宝姓名"/>
+			</div>
+			<div class="t_for">
+				<input type="button" name="" id="t_for1" value="取消" />
+				<input type="button" name="" id="t_for2" value="确认" />
+			</div>
+		</div>
+		<div class="wx_weixin">
+			<div class="wx_top">
+				<p class="wx_top_b">绑定微信号</p>
+				<p class="wx_top_x">&times;</p>
+			</div>
+			<div class="t_con wx_con">
+				<input type="" name="" id="wx_input1" value="" placeholder="请输入微信号"/>
+			</div>
+				<div class="wx_for">
+				<input type="button" name="" id="wx_for1" value="取消" />
+				<input type="button" name="" id="wx_for2" value="确认" />
+			</div>
+		</div>
+		<div class="t_kefu">
+			<div class="t_kefu_con">
+				<p>微信客服1：guyllilli</p>
+				<p>微信客服2：mglz11221</p>
+				<p> QQ客服：862487637</p>
+			</div>
+			<div class="ke_for">
+				<input type="button" name="" id="ke_for1" value="确认" />
+			</div>
+		</div>
+		
+		<div class="t_tuchu">
+			<div class="t_kefu_con">
+				确认退出吗？
+			</div>
+			<div class="wx_for">
+				<input type="button" name="" id="tc_for1" value="取消" />
+				<input type="button" name="" id="tc_for2" value="确认" />
+			</div>
+		</div>
+		
+			<div class="bjj"></div>
+    <!--</nav>-->
+    
+	<!--</div>-->
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(".t_top_x").click(function(){
+				$(".t_zhifubao").hide()
+				$(".bjj").hide()
+			})
+			$("#t_for1").click(function(){
+				$(".t_zhifubao").hide()
+					$(".bjj").hide()
+			})
+			$(".right_zhifubao").click(function(){
+				$(".t_zhifubao").show()
+					$(".bjj").show()
+			})
+			$(".wx_top_x").click(function(){
+				$(".wx_weixin").hide()
+				$(".bjj").hide()
+			})
+			$("#wx_for1").click(function(){
+				$(".wx_weixin").hide()
+					$(".bjj").hide()
+			})
+			$(".right_weixin").click(function(){
+				$(".wx_weixin").show()
+					$(".bjj").show()
+			})
+			$(".right_kefu").click(function(){
+				$(".t_kefu").show()
+					$(".bjj").show()
+			})
+			$("#ke_for1").click(function(){
+				$(".t_kefu").hide()
+				$(".bjj").hide()
+			});
+			$(".right_tuichu").click(function(){
+				$(".t_tuchu").show()
+					$(".bjj").show()
+			})
+			$("#tc_for1").click(function(){
+				$(".t_tuchu").hide()
+				$(".bjj").hide()
+			});
+			$("#tc_for2").click(function(){
+				 window.location.href="index.html"
+			});
+			
+	</script>
+	</body>
+</html>
